@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+source ./env
+
+pandoc $opts -t beamer $1 -o "$OUTPUT_PATH$(basename $1 .md).pdf" \
+	-V title="Client Server" \
+	-V author="Mhmd Ali Hsen" \
+	-V institute="Al Afaq" \
+	-V theme="AnnArbor" \
+	-V colortheme="default" \
+	-V fontsize="10pt" \
+	-V aspectratio="169" \
+	-V date="2023" \
+	-V section_titles="false" \
+	-V toc="false"

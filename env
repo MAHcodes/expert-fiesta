@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+OUTPUT_PATH="./pdfs/"
+
+if [ ! -d "$OUTPUT_PATH" ]; then
+  mkdir "$OUTPUT_PATH"
+fi
+
+export OUTPUT_PATH
