@@ -1,14 +1,18 @@
 #!/usr/bin/env bash
 
+if [ ! -d "pdfs" ]; then
+  mkdir "pdfs"
+fi
+
 pandoc -s $opts -t beamer $1 -o "./pdfs/$(basename $1 .md).pdf" \
+  --slide-level=3 \
 	-V title="Client Server" \
   -V subtitle="My presentation subtitle" \
 	-V author="Mhmd Ali Hsen" \
 	-V institute="Al Afaq" \
-	-V theme="Madrid" \
+	-V date="2023" \
 	-V colortheme="wolverine" \
+  -V theme="AnnArbor" \
 	-V fonttheme="structurebold" \
-  -V lang="en-US" \
 	-V fontsize="9pt" \
-	-V aspectratio="169" \
-	-V date="2023"
+	-V aspectratio="169"
