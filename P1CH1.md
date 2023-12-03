@@ -261,14 +261,12 @@ This is an fundamental software architecture which consists of two layers or tie
 ---
 
 - **Client tier**  
-Is the top most layer which is like an user interface and interaction part of the application. it acts as an web browser, desktop application, or mobile app, through which the user interacts with the application. It is responsible for presenting the data and processing the input of the application.
+  Is the top most layer which is like an user interface and interaction part of the application. it acts as an web browser, desktop application, or mobile app, through which the user interacts with the application. It is responsible for presenting the data and processing the input of the application.
 
 - **Server tier**  
-is an bottom layer which contains the logic that us required to handle the data processing and data management.
-
+  is an bottom layer which contains the logic that us required to handle the data processing and data management.
 
 ### 1.5.4 Overview of three-tier architecture
-
 
 :::columns
 
@@ -289,16 +287,25 @@ In a three-tier system, the application logic or process lives in the middle-tie
 ---
 
 - **Presentation Tier**  
-It is the user interface and topmost tier in the architecture. Its purpose is to take request from the client and displays information to the client.
+  It is the user interface and topmost tier in the architecture. Its purpose is to take request from the client and displays information to the client.
 
 - **Application Tier**  
-It is the middle tier of the architecture also known as the logic tier or business tier as the information/request gathered through the presentation tier is processed in detail here.
+  It is the middle tier of the architecture also known as the logic tier or business tier as the information/request gathered through the presentation tier is processed in detail here.
 
 - **Data Tier**  
-It is the last tier of the architecture also known as the Database Tier. It is used to store the processed information so that it can be retrieved later on when required.
+  It is the last tier of the architecture also known as the Database Tier. It is used to store the processed information so that it can be retrieved later on when required.
 
 ### 1.5.5 Comparison of the two types of architecture
 
+|     | Two-Tier architecture                                                                                                         | Three-Tier Architecture                                                                                           |
+| --- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| 1.  | Consists of two layers : Client Tier and Database (Data Tier)                                                                 | Consists of three layers: Presentation Layer (Client), Application Layer (Server), and Database Layer             |
+| 2.  | Easy to build and maintain                                                                                                    | Complex to build and maintain                                                                                     |
+| 3.  | Typically slower                                                                                                              | Improved performance                                                                                              |
+| 4.  | The application logic is either buried inside the user interface on the client or within the database on the server (or both) | The application logic or process resides in the middle-tier, it is separated from the data and the user interface |
+| 5.  | Less secured as client can communicate with database directly                                                                 | Secured with middle tier                                                                                          |
+| 6.  | e.g. Traditional desktop apps                                                                                                 | e.g. Web-based applications                                                                                       |
+
 ### 1.5.6 Multi-Level Architecture
 
-Multi-tier architecture, also known as n-tier architecture, extends the concept of the three-tier architecture by introducing additional tiers. These tiers can be used to further segregate the application's components, enhance security, improve scalability, and facilitate better organization and decoupling of the system's
+Multitier architecture (often referred to as n-tier architecture) is a client–server architecture in which presentation, application processing and data management functions are physically separated. The most widespread use of multitier architecture is the three-tier architecture.
