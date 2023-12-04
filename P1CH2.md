@@ -27,42 +27,43 @@ The most common protocol request/response pattern used on a network is the HTTP 
 
 **Key components:**
 
-1. **Uniform Resource Identifier (URI):**  
+1. **Uniform Resource Identifier (URI):**
 
-    The client includes a **URI** in the request to specify the desired resource.  
+   The client includes a **URI** in the request to specify the desired resource.
 
-    The **URI** (Uniform Resource Identifiers) can be one of two things, a **URL** (Uniform Resource Locator) or a **URN** (Uniform Resource Name).
+   The **URI** (Uniform Resource Identifiers) can be one of two things, a **URL** (Uniform Resource Locator) or a **URN** (Uniform Resource Name).
 
-    ![URI vs URL vs URN](./imgs/uri-url-urn.jpg){width=300px}
+   ![URI vs URL vs URN](./imgs/uri-url-urn.jpg){width=300px}
 
 ---
 
-2. **HTTP Methods:**  
+2. **HTTP Methods:**
 
-    HTTP defines several methods that specify the desired action to be performed on the server.  
+   HTTP defines several methods that specify the desired action to be performed on the server.
 
-    The most commonly used methods are:
-    - **GET:** Retrieves a representation of a resource.
-    - **POST:** Submits data to be processed by the server, often used for form submissions.
-    - **PUT:** Updates or replaces a resource with the provided data.
-    - **DELETE:** Removes a specified resource.
+   The most commonly used methods are:
 
-    ![CRUD](./imgs/crud.png){width=300px}
+   - **GET:** Retrieves a representation of a resource.
+   - **POST:** Submits data to be processed by the server, often used for form submissions.
+   - **PUT:** Updates or replaces a resource with the provided data.
+   - **DELETE:** Removes a specified resource.
+
+   ![CRUD](./imgs/crud.png){width=300px}
 
 ---
 
 3. Headers:
 
-    The client can include additional headers in the request to provide information to the server. Headers can specify things like the client’s user agent, accepted content types, authentication credentials, and more.  
+   The client can include additional headers in the request to provide information to the server. Headers can specify things like the client’s user agent, accepted content types, authentication credentials, and more.
 
-    **Example:** `User-Agent: Mozilla/5.0` , `Accept: text/html`
+   **Example:** `User-Agent: Mozilla/5.0` , `Accept: text/html`
 
-    The server includes headers in the response to provide information back to the client. Headers can specify things like the content type of the response, caching directives, cookies, and more.  
+   The server includes headers in the response to provide information back to the client. Headers can specify things like the content type of the response, caching directives, cookies, and more.
 
-    **Example:** `Content-Type: application/json` , `Cache-Control: max-age=3600`
+   **Example:** `Content-Type: application/json` , `Cache-Control: max-age=3600`
 
 ---
 
-4. **Body:**  
+4. **Body:**
 
-    For methods like **POST** and **PUT,** the client can include a request body that contains additional data to be sent to the server. The format of the request body depends on the data being transmitted (e.g., form data, JSON payload). The response body contains the actual data returned by the server, format depends on the requested resource.
+   For methods like **POST** and **PUT,** the client can include a request body that contains additional data to be sent to the server. The format of the request body depends on the data being transmitted (e.g., form data, JSON payload). The response body contains the actual data returned by the server, format depends on the requested resource.
