@@ -8,11 +8,11 @@ pandoc -s $opts -t beamer $1 -o "./pdfs/$(basename $1 .md).pdf" \
   --slide-level=3 \
 	-V title="Client Server" \
   -V subtitle="My presentation subtitle" \
+	-V colortheme="wolverine" \
+  -V theme="AnnArbor" \
 	-V author="Mhmd Ali Hsen" \
 	-V institute="Al Afaq" \
 	-V date="2023 - 2024" \
-	-V colortheme="wolverine" \
-  -V theme="AnnArbor" \
 	-V fonttheme="structurebold" \
 	-V fontsize="9pt" \
 	-V aspectratio="169"
