@@ -443,3 +443,70 @@ The **User Datagram Protocol** (UDP) is one of the core communication protocols 
 **UDP** uses a simple **connectionless communication** model with a minimum of protocol mechanisms. UDP provides **checksums** for data integrity, and port numbers for addressing different functions at the source and destination of the datagram. It has no handshaking dialogues and thus exposes the user's program to any unreliability of the underlying network; there is no guarantee of delivery, ordering, or duplicate protection. If error-correction facilities are needed at the network interface level, an application may instead use **Transmission Control Protocol** (TCP) or **Stream Control Transmission Protocol** (SCTP) which are designed for this purpose.
 
 UDP is suitable for purposes where error checking and correction are either not necessary or are performed in the application; UDP avoids the overhead of such processing in the protocol stack. Time-sensitive applications often use UDP because dropping packets is preferable to waiting for packets delayed due to retransmission, which may not be an option in a real-time system.
+
+---
+
+The UDP protocol provides a mode of network communication whereby applications send packets of data, called datagrams, to one another. A datagram is an independent, self-contained message sent over the network whose arrival, arrival time, and content are not guaranteed. The DatagramPacket and DatagramSocket classes in the java.net package implement system-independent datagram communication using UDP.
+
+The java.net package contains three classes to help you write Java programs that use datagrams to send and receive packets over the network: DatagramSocket, DatagramPacket, and MulticastSocket An application can send and receive DatagramPackets through a DatagramSocket. In addition, DatagramPackets can be broadcast to multiple recipients all listening to a MulticastSocket.
+
+---
+
+To send data via Java's DatagramSocket you must first create a DatagramPacket. Here is how that is done:
+
+```java
+byte[] buffer = new byte[65508];
+InetAddress address = InetAddress.getByName("domainname");
+DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, p);
+```
+
+The byte buffer (the byte array) is the data that is to be sent in the UDP datagram. The length of the above buffer, 65508 bytes, is the maximum amount of data you can send in a single UDP packet.
+
+The length given to the DatagramPacket constructor is the length of the data in the buffer to send. All data in the buffer after that amount of data is ignored.
+
+The InetAddress instance contains the address of the node (e.g. server) to send the UDP packet to.
+
+---
+
+The InetAddress class represents an IP address (Internet Address). The getByName() method returns an InetAddress instance with the IP address matching the given host name.
+
+The port parameter is the UDP port the server to receiver the data is listeing on. UDP and TCP ports are not the same. A computer can have different processes listening on e.g. port 80 in UDP and in TCP at the same time.
+
+To send the DatagramPacket you must create a DatagramSocket targeted at sending data. Here is how that is done:
+
+```java
+DatagramSocket datagramSocket = new DatagramSocket();
+```
+
+To send data you call the send() method, like this:
+
+```java
+datagramSocket.send(packet);
+```
+
+---
+
+Here is a full example:
+
+```java
+DatagramSocket datagramSocket = new DatagramSocket();
+byte[] buffer = "0123456789".getBytes();
+InetAddress receiverAddress = InetAddress.getLocalHost();
+DatagramPacket packet = new DatagramPacket(buffer, buffer.length, receiverAddress, 80);
+datagramSocket.send(packet);
+```
+
+Receiving data via a DatagramSocket is done by first creating a DatagramPacket and then receiving data into it via the DatagramSocket's receive() method. Here is an example:
+
+```java
+DatagramSocket datagramSocket = new DatagramSocket(80); byte[] buffer = new byte[10];
+DatagramPacket packet = new DatagramPacket(buffer, buffer.length); datagramSocket.receive(packet);
+```
+
+---
+
+Notice how the DatagramSocket is instantiated with the parameter value 80 passed to its constructor. This parameter is the UDP port the DatagramSocket is to receive UDP packets on. As mentioned earlier, TCP and UDP ports are not the same, and thus do not overlap. You can have two different processes listening on both TCP and UDP port 80, without any conflict.
+
+Second, a byte buffer and a DatagramPacket is created. Notice how the DatagramPacket has no information about the node to send data to, as it does when creating a DatagramPacket for sending data. This is because we are going to use the DatagramPacket for receiving data, not sending it. Thus no destination address is needed.
+
+Finally  the DatagramSocket's receive() method  is  called.  This  method  blocks  until a DatagramPacket is received.
