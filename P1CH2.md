@@ -5,7 +5,6 @@ section-titles: false
 # Table of Contents
 
 <!--toc:start-->
-
 - [Table of Contents](#table-of-contents)
 - [2. Client/server architecture](#2-clientserver-architecture)
   - [2.1 Client/server dialogue techniques](#21-clientserver-dialogue-techniques)
@@ -15,8 +14,10 @@ section-titles: false
     - [2.2.1 InetAddress Class](#221-inetaddress-class)
     - [2.2.2 Using Sockets](#222-using-sockets)
     - [2.2.2.1 TCP Sockets](#2221-tcp-sockets)
-  - [TCP Example:](#tcp-example) - [2.2.2.2 UDP Sockets](#2222-udp-sockets)
-  <!--toc:end-->
+  - [TCP Example:](#tcp-example)
+    - [2.2.2.2 UDP Sockets](#2222-udp-sockets)
+    - [TCP VS UDP](#tcp-vs-udp)
+<!--toc:end-->
 
 # 2. Client/server architecture
 
