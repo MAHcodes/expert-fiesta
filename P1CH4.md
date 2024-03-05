@@ -87,7 +87,7 @@ Instead, they request available ports from the operating system during startup. 
 :::
 ---
 
-**Why Standard Ports Aren't Used?**
+**Why Standard/Static Ports Aren't Used?**
 
 One of the challenges in **RPC** is that the number of potential **RPC** programs can far exceed the available port numbers.
 Since both **TCP** and **UDP** use 16-bit port numbers, offering only 65,536 possibilities, while program numbers can represent over 4 billion (2^32) programs.
@@ -127,3 +127,63 @@ This makes it **impossible** to directly map a program number to a port number. 
 
 4. **Portmapper Lookup:** The portmapper searches its registry and finds the program information. It retrieves the corresponding dynamically assigned port (45678).
 5. **Client Connection:** The client now knows the server's port (45678) and can establish a direct connection to the server using that port to access the "File Sharing" service.
+
+## 4.5. Semantics of transport for RPC
+
+Imagine you're calling a friend on the phone, but sometimes the call gets dropped and you need to call again. due to traffic or network issues, the message might be delivered multiple times.
+This can be problematic when working with Remote Procedure Calls (RPCs), where we want to ensure the remote procedure executes as intended.
+
+There are three choices of call semantics, which define how RPC systems handle situations where the request might be sent multiple times:
+
+1. **Exactly once:** This is the ideal scenario, guaranteeing the procedure runs only once even if the request is sent multiple times. It's crucial for sensitive operations like financial transactions to avoid duplicate actions. However, achieving this is the most challenging.
+2. **At most once:** A successful response from the remote computer confirms the procedure was executed at most once. However, if there's an error or the response is lost, the system can't guarantee execution. This might be suitable for situations where retries are acceptable.
+3. **At least once:** This ensures the procedure runs at least once. The client might resend the request until it receives a successful response. This can lead to multiple executions, which might be undesirable in some cases, but it's often used for idempotent procedures.
+
+## 4.6. RPC Authentication
+
+To ensure **secure** communication, **RPC** defines various authentication methods. These range from a simple scheme using UNIX credentials to a more robust approach using **Data Encryption Standard** (DES).
+Here's an overview of the common authentication types:
+
+- **NULL Authentication:** No authentication is performed. Neither the client nor the server verifies each other's identity. This is suitable for low-risk situations like accessing a public time server.
+- **UNIX Style Authentication:** This method relies on the client providing its hostname, user ID, local timestamp, and group information. The server uses this information to grant or deny access. However, this method is considered weak as anyone can impersonate a user by knowing their credentials on the client machine. It's primarily used in NFS (Network File System).
+- **Data Encryption Standard (DES):** This method offers stronger security. The client sends a password to the server in an encrypted format using a shared secret key. This makes it significantly harder for unauthorized users to eavesdrop and impersonate legitimate users.
+- **SHORT:** This method is primarily used for subsequent messages after the initial connection is established. After initial authentication, the client receives a "handle" used for future communication, eliminating the need to repeatedly send credentials. This enhances security as an attacker cannot easily forge the handle.
+
+## 4.7. RPC Message Format
+
+The RPC protocol uses a specific format for messages exchanged between clients and servers. It consists of several key elements:
+
+-   **Message ID:**  A unique identifier for each message, allowing proper response matching.
+-   **Message Type:**  Indicates whether the message is a  **CALL**  (requesting a procedure execution) or a  **REPLY**  (responding to a previous request).
+-   **RPC Version Number:**  Specifies the version of the RPC library being used.
+-   **Remote Program:**  The name of the program on the server that the procedure call is intended for.
+-   **Remote Program Version:**  The specific version of the program being targeted.
+-   **Remote Procedure:**  The name of the specific procedure being invoked on the server.
+-   **Procedure Arguments (CALL):**  The data sent to the server for the procedure execution (only present in CALL messages).
+-   **Procedure Results (REPLY):**  The data returned by the server after executing the procedure (only present in REPLY messages).
+
+### Example:
+
+- **Client sends a CALL message to a server to get the current date:**
+
+    ```
+    Message ID: 1234 (unique identifier)
+    Message Type: CALL
+    RPC Version Number: 2 (version of the RPC library)
+    Remote Program: "DateService"
+    Remote Program Version: 1
+    Remote Procedure: "GetCurrentDate"
+    Procedure Arguments: (empty, as no arguments are needed)
+    ```
+
+- **Server replies with a REPLY message:**
+
+    ```
+    Message ID: 1234 (matching the original CALL message ID)
+    Message Type: REPLY
+    RPC Version Number: 2
+    Remote Program: "DateService"
+    Remote Program Version: 1
+    Remote Procedure: "GetCurrentDate"
+    Procedure Results: "2024-03-05" (the current date)
+    ```

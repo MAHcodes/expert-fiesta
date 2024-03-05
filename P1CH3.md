@@ -2,7 +2,29 @@
 section-titles: false
 ---
 
-# 3 Middleware
+# Table of Contents
+
+<!--toc:start-->
+- [Table of Contents](#table-of-contents)
+- [3. Middleware](#3-middleware)
+  - [3.1 Definition](#31-definition)
+    - [Types of Middleware](#types-of-middleware)
+  - [3.2 Features](#32-features)
+    - [Example](#example)
+  - [3.4 Login procedure](#34-login-procedure)
+  - [3.4.1 Preparing requests](#341-preparing-requests)
+  - [3.4.2 Executing queries](#342-executing-queries)
+  - [3.4.3 Retrieving results](#343-retrieving-results)
+  - [3.4.3.1 JDBC Examples](#3431-jdbc-examples)
+    - [Create Database Example](#create-database-example)
+    - [Insert Records Example](#insert-records-example)
+    - [Drop Database Example](#drop-database-example)
+  - [3.4.4 Results cache management](#344-results-cache-management)
+  - [3.4.5. Query cache management](#345-query-cache-management)
+  - [3.4.6. Disconnect procedure](#346-disconnect-procedure)
+<!--toc:end-->
+
+# 3. Middleware
 
 ## 3.1 Definition
 
@@ -10,7 +32,7 @@ section-titles: false
 
 It is software that helps to **connect** the operating system and applications. Or it is software that runs **between client** and **server** processes. Generally, this software is written in such a way that the user never notices the presence of middleware. It also helps in delivering **secure** and **transparent** services to users.
 
-## Types of Middleware
+### Types of Middleware
 
 1. **RPC – Remote Procedure Calls** (RPC)
 
@@ -51,7 +73,7 @@ The middleware layer has evolved to the most appropriate place for functionality
 13. **Different Apps Talking:** Enables applications built with different tools to work together.
 14. **Shared Services:** Provides common tools.
 
-## Example
+### Example
 
 :::columns
 
@@ -111,7 +133,7 @@ This is an example of how to create a simple JDBC application. This will show yo
 import java.sql.*;
 
 public class Example {
-   static final String DB_URL = "jdbc:mysql://localhost/TUTORIALSPOINT";
+   static final String DB_URL = "jdbc:mysql://localhost/";
    static final String USER = "guest";
    static final String PASS = "guest123";
    static final String QUERY = "SELECT id, first, last, age FROM Employees";
@@ -183,7 +205,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class JDBCExample {
-   static final String DB_URL = "jdbc:mysql://localhost/TUTORIALSPOINT";
+   static final String DB_URL = "jdbc:mysql://localhost/";
    static final String USER = "guest";
    static final String PASS = "guest123";
 ```
