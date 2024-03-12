@@ -5,11 +5,22 @@ section-titles: false
 # Table of Contents
 
 <!--toc:start-->
-
 - [Table of Contents](#table-of-contents)
 - [4. Remote Procedure Call (RPC)](#4-remote-procedure-call-rpc)
-  - [Introduction](#introduction)
-  <!--toc:end-->
+  - [4.1 Introduction](#41-introduction)
+  - [4.2. RPC model](#42-rpc-model)
+    - [Sequence of events](#sequence-of-events)
+    - [4.3. Identifying remote procedures](#43-identifying-remote-procedures)
+    - [4.4. Dynamic allocation of transport ports to RPC programs](#44-dynamic-allocation-of-transport-ports-to-rpc-programs)
+  - [4.5. Semantics of transport for RPC](#45-semantics-of-transport-for-rpc)
+  - [4.6. RPC Authentication](#46-rpc-authentication)
+  - [4.7. RPC Message Format](#47-rpc-message-format)
+    - [Example:](#example)
+  - [4.8. RPC Language](#48-rpc-language)
+  - [4.9 Practical application](#49-practical-application)
+    - [4.9.1. Sun Java RMI](#491-sun-java-rmi)
+    - [4.9.2. RMI Security](#492-rmi-security)
+<!--toc:end-->
 
 # 4. Remote Procedure Call (RPC)
 
@@ -189,13 +200,15 @@ The RPC protocol uses a specific format for messages exchanged between clients a
 
 ## 4.8. RPC Language
 
-The easiest way to define and generate the protocol is to use a protocol compiler such as **rpcgen**.
+The easiest way to define and generate the protocol is to use a compiler such as **rpcgen**.
 
-rpcgen generates code (stubs) that hides the network communication details from both the client and server code. These stubs can be compiled and linked with the developer's code to create a functional RPC program. The client calls the local stubs as if they were local procedures, and the server procedures are linked with the server stub to handle remote calls.
+rpcgen generates code (stubs) that hides the network communication details from both the client and server code.
 
-The **rpcgen** command generates C code to implement a Remote Procedure Call (RPC) protocol. The **input** to the **rpcgen** command is a language similar to C language known as **RPC Language**. The first syntax structure is the most commonly used form for the **rpcgen** command where it takes an input file and generates four output files.
+These stubs can be compiled and linked with the developer's code to create a functional **RPC** program. The client calls the local stubs as if they were local procedures, and the server procedures are linked with the server stub to handle remote calls.
 
-For example, if the InputFile parameter is named `proto.x`, then the rpcgen command generates the following:
+The **rpcgen** command generates C code to implement a Remote Procedure Call (RPC) protocol. The **input** to the **rpcgen** command is a language similar to C language known as **RPC Language**. The most common use form for the **rpcgen** command where it takes an input file and generates four output files.
+
+For example, if the `InputFile` parameter is named `proto.x`, then the rpcgen command generates the following:
 
 | File         | Description                                                                    |
 | ------------ | ------------------------------------------------------------------------------ |
@@ -232,7 +245,7 @@ The following diagram shows the architecture of an RMI application.
 
 - **Transport Layer**: This layer connects the client and the server. It manages the existing connection and also sets up new connections.
 
-- **Stub**: A stub is a representa on (proxy) of the remote object at client. It resides in the client system; it acts as a gateway for the client program.
+- **Stub**: A stub is a representation (proxy) of the remote object at client. It resides in the client system; it acts as a gateway for the client program.
 
 - **Skeleton**: This is the object which resides on the server side. stub communicates with this skeleton to pass request to the remote object.
 
@@ -252,11 +265,11 @@ The following diagram shows the architecture of an RMI application.
 
 **Working of an RMI Application**
 
-When the client makes a call to the remote object, it is received by the stub which eventually passes this request to the RRL.
+When the client makes a call to the remote object, it is received by the stub which eventually passes this request to the **RRL**.
 
-When the client-side RRL receives the request, it invokes a method called invoke() of the object remoteRef. It passes the request to the RRL on the server side.
+When the client-side **RRL** receives the request, it invokes a method called invoke() of the object remoteRef. It passes the request to the **RRL** on the server side.
 
-The RRL on the server side passes the request to the Skeleton (proxy on the server) which finally invokes the required object on the server.
+The **RRL** on the server side passes the request to the Skeleton (proxy on the server) which finally invokes the required object on the server.
 
 The result is passed all the way back to the client.
 
@@ -264,11 +277,11 @@ The result is passed all the way back to the client.
 
 **Marshalling and Unmarshalling**
 
-Whenever a client invokes a method that accepts parameters on a remote object, the parameters are bundled into a message before being sent over the network.
+Whenever a client invokes a method that accepts parameters on a remote object, the parameters are **bundled** into a message before being sent over the network.
 
-These parameters may be of primitive type or objects. In case of primitive type, the parameters are put together and a header is attached to it. In case the parameters are objects, then they are serialized.
+These parameters may be of **primitive** type or objects. In case of **primitive** type, the parameters are put together and a header is attached to it. In case the parameters are objects, then they are serialized.
 
-This process is known as marshalling. At the server side, the packed parameters are unbundled and then the required method is invoked. This process is known as unmarshalling.
+This process is known as **marshalling.** At the server side, the packed parameters are unbundled and then the required method is invoked. This process is known as **unmarshalling.**
 
 ---
 
@@ -278,11 +291,11 @@ This process is known as marshalling. At the server side, the packed parameters 
 
 ::::{.column width=60%}
 
-RMI registry is a namespace on which all server objects are placed. Each time the server creates an object, it registers this object with the RMI registry (using bind() or reBind() methods).
+**RMI registry** is a namespace on which all server objects are placed. Each time the server creates an object, it registers this object with the **RMI registry** (using `bind()` or `reBind()` methods).
 
-These are registered using a unique name known as bind name.
+These are registered using a **unique** name known as bind name.
 
-To invoke a remote object, the client needs a reference of that object. At that time, the client fetches the object from the registry using its bind name (using lookup() method).
+To invoke a remote object, the client needs a reference of that object. At that time, the client fetches the object from the registry using its bind name (using `lookup()` method).
 
 The following illustration explains the entire process
 
@@ -309,7 +322,7 @@ The following illustration explains the entire process
 
 **Write RMI Java Application**
 
-To write an RMI Java application, you would have to follow the steps given below
+To write an RMI Java application:
 
 - Define the remote interface
 - Develop the implementation class (remote object)
@@ -317,27 +330,29 @@ To write an RMI Java application, you would have to follow the steps given below
 - Develop the client program
 - Compile the application
 - Execute the application
-- Defining the Remote Interface
-
-A remote interface provides the description of all the methods of a particular remote object. The client communicates with this remote interface.
 
 ---
 
-**To create a remote interface:**
+**Defining the Remote Interface**
+
+A remote interface provides the description of all the methods of a particular remote object. The client communicates with this remote interface.
+
+To create a remote interface:
 
 - Create an interface that extends the predefined interface Remote which belongs to the package.
 - Declare all the business methods that can be invoked by the client in this interface.
 
-Since there is a chance of network issues during remote calls, an exception named RemoteException may occur; throw it.
+Since there is a chance of network issues during remote calls, an exception named **RemoteException** may occur; throw it.
 
-Following is an example of a remote interface. Here we have defined an interface with the name Hello and it has a method called printMsg().
+Following is an example of a remote interface. Here we have defined an interface with the name Hello and it has a method called `printMsg()`.
 
 ```java
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+
 // Creating Remote interface for our application
 public interface Hello extends Remote {
-void printMsg() throws RemoteException;
+    void printMsg() throws RemoteException;
 }
 ```
 
@@ -357,9 +372,11 @@ Following is an implementation class. Here, we have created a class named ImplEx
 ```java
 // Implementing the remote interface
 public class ImplExample implements Hello {
-// Implementing the interface method
-public void printMsg() {
-System.out.println("This is an example RMI program");
+
+    // Implementing the interface method
+    public void printMsg() {
+        System.out.println("This is an example RMI program");
+    }
 }
 ```
 
@@ -367,15 +384,17 @@ System.out.println("This is an example RMI program");
 
 **Developing the Server Program**
 
-An RMI server program should implement the remote interface or extend the implementation class. Here, we should create a remote object and bind it to the RMIregistry.
+An RMI server program should implement the remote interface or extend the implementation class.
+
+Here, we should create a remote object and bind it to the **RMI registry**.
 
 **To develop a server program:**
 
-- Create a client class from where you want invoke the remote object.
+- Create a server class from where you want invoke the remote object.
 - Create a remote object by instantiating the implementation class as shown below.
-- Export the remote object using the method exportObject() of the class named UnicastRemoteObject which belongs to the package java.rmi.server.
-- Get the RMI registry using the getRegistry() method of the LocateRegistry class which belongs to the package java.rmi.registry.
-- Bind the remote object created to the registry using the bind() method of the class named Registry. To this method, pass a string representing the bind name and the object exported, as parameters.
+- Export the remote object using the method `exportObject()` of the class named UnicastRemoteObject which belongs to the package `java.rmi.server`.
+- Get the RMI registry using the `getRegistry()` method of the LocateRegistry class which belongs to the package `java.rmi.registry`.
+- Bind the remote object created to the registry using the `bind()` method of the class named Registry. To this method, pass a string representing the bind name and the object exported, as parameters.
 
 ---
 
@@ -422,10 +441,10 @@ Write a client program in it, fetch the remote object and invoke the required me
 To develop a client program:
 
 - Create a client class from where your intended to invoke the remote object.
-- Get the RMI registry using the getRegistry() method of the LocateRegistry class which belongs to the package java.rmi.registry.
-- Fetch the object from the registry using the method lookup() of the class Registry which belongs to the package java.rmi.registry.
+- Get the **RMI registry** using the `getRegistry()` method of the LocateRegistry class which belongs to the package `java.rmi.registry`.
+- Fetch the object from the registry using the method `lookup()` of the class Registry which belongs to the package `java.rmi.registry`.
   To this method, you need to pass a string value representing the bind name as a parameter. This will return you the remote object.
-- The lookup() returns an object of type remote, down cast it to the type Hello.
+- The `lookup()` returns an object of type remote, down cast it to the type Hello.
 - Finally invoke the required method using the obtained remote object.
 
 ---
@@ -496,37 +515,43 @@ To compile the application:
 
 ---
 
-**RMI Example:** Calculator Program
+### RMI Example: Calculator Program
 
 **Interface**
 
 ```java
-public interface Calculator extends java.rmi.Remote {
-    public long add(long a, long b) throws java.rmi.RemoteException;
-    public long sub(long a, long b) throws java.rmi.RemoteException;
-    public long mul(long a, long b) throws java.rmi.RemoteException;
-    public long div(long a, long b) throws java.rmi.RemoteException;
+import java.rmi.registry.Registry;
+import java.rmi.RemoteException;
+
+public interface Calculator extends Remote {
+    public long add(long a, long b) throws RemoteException;
+    public long sub(long a, long b) throws RemoteException;
+    public long mul(long a, long b) throws RemoteException;
+    public long div(long a, long b) throws RemoteException;
 }
 ```
 
 ---
 
+**Interface Implementation:**
+
 ```java
-Interface Implementation:
-public class CalculatorImpl extends
-    java.rmi.server.UnicastRemoteObject implements Calculator {
+import java.rmi.server.UnicastRemoteObject;
+import java.rmi.RemoteException;
+
+public class CalculatorImpl extends UnicastRemoteObject implements Calculator {
     // Implementations must have an explicit constructor in order to declare the
     // RemoteException exception
-    public CalculatorImpl() throws java.rmi.RemoteException {
+    public CalculatorImpl() throws RemoteException {
         super();
     }
-    public long add(long a, long b) throws java.rmi.RemoteException {
+    public long add(long a, long b) throws RemoteException {
         return a + b;
     }
-    public long sub(long a, long b) throws java.rmi.RemoteException {
+    public long sub(long a, long b) throws RemoteException {
         return a - b;
     }
-    public long mul(long a, long b) throws java.rmi.RemoteException {
+    public long mul(long a, long b) throws RemoteException {
         return a * b;
     }
 }
@@ -545,7 +570,7 @@ public class CalculatorServer {
             Calculator c = new CalculatorImpl();
             Naming.rebind("rmi://localhost:1099/CalculatorService", c);
         } catch (Exception e) {
-            System.out.println("Trouble: " + e);
+            System.out.println(e);
         }
     }
 
@@ -564,40 +589,33 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.net.MalformedURLException;
 import java.rmi.NotBoundException;
+import java.lang.ArithmeticException
 
 public class CalculatorClient {
     public static void main(String[] args) {
         try {
-            Calculator c = (Calculatr)Naming.lookup( "rmi://localhost/CalculatorService");
+            Calculator c = (Calculator)Naming.lookup( "rmi://localhost/CalculatorService");
             System.out.println(c.sub(4, 3));
             System.out.println(c.add(4, 5));
             System.out.println(c.mul(3, 6));
             System.out.println(c.div(9, 3));
-        }
-        catch (MalformedURLException murle) {
-            System.out.println();
-            System.out.println("MalformedURLException");
-            System.out.println(murle);
         }
 ```
 
 ---
 
 ```java
+        catch (MalformedURLException murle) {
+            System.out.println("MalformedURLException" + murle);
+        }
         catch (RemoteException re) {
-            System.out.println();
-            System.out.println("RemoteException");
-            System.out.println(re);
+            System.out.println("RemoteException" + re);
         }
         catch (NotBoundException nbe) {
-            System.out.println();
-            System.out.println("NotBoundException");
-            System.out.println(nbe);
+            System.out.println("NotBoundException" + nbe);
         }
-        catch (java.lang.ArithmeticException ae) {
-            System.out.println();
-            System.out.println("java.lang.ArithmeticException");
-            System.out.println(ae);
+        catch (ArithmeticException ae) {
+            System.out.println("ArithmeticException" + ae);
         }
     }
 }
