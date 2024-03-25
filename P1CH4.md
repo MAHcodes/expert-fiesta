@@ -5,6 +5,7 @@ section-titles: false
 # Table of Contents
 
 <!--toc:start-->
+
 - [Table of Contents](#table-of-contents)
 - [4. Remote Procedure Call (RPC)](#4-remote-procedure-call-rpc)
   - [4.1 Introduction](#41-introduction)
@@ -17,10 +18,8 @@ section-titles: false
   - [4.7. RPC Message Format](#47-rpc-message-format)
     - [Example:](#example)
   - [4.8. RPC Language](#48-rpc-language)
-  - [4.9 Practical application](#49-practical-application)
-    - [4.9.1. Sun Java RMI](#491-sun-java-rmi)
-    - [4.9.2. RMI Security](#492-rmi-security)
-<!--toc:end-->
+  - [4.9 Practical application](#49-practical-application) - [4.9.1. Sun Java RMI](#491-sun-java-rmi) - [4.9.2. RMI Security](#492-rmi-security)
+  <!--toc:end-->
 
 # 4. Remote Procedure Call (RPC)
 
@@ -96,6 +95,8 @@ Instead, they request available ports from the operating system during startup. 
 ::::
 
 :::
+
+---
 
 **Why Standard/Static Ports Aren't Used?**
 
@@ -265,7 +266,7 @@ The following diagram shows the architecture of an RMI application.
 
 **Working of an RMI Application**
 
-When the client makes a call to the remote object, it is received by the stub which eventually passes this request to the **RRL**.
+When the client makes a call to the remote object, it is received by the stub which eventually passes this request to the **RRL** (Remote Reference Layer).
 
 When the client-side **RRL** receives the request, it invokes a method called invoke() of the object remoteRef. It passes the request to the **RRL** on the server side.
 
@@ -324,22 +325,22 @@ The following illustration explains the entire process
 
 To write an RMI Java application:
 
-- Define the remote interface
-- Develop the implementation class (remote object)
-- Develop the server program
-- Develop the client program
-- Compile the application
-- Execute the application
+1. Define the remote interface
+2. Develop the implementation class (remote object)
+3. Develop the server program
+4. Develop the client program
+5. Compile the application
+6. Execute the application
 
 ---
 
-**Defining the Remote Interface**
+1. **Defining the Remote Interface**
 
 A remote interface provides the description of all the methods of a particular remote object. The client communicates with this remote interface.
 
 To create a remote interface:
 
-- Create an interface that extends the predefined interface Remote which belongs to the package.
+- Create an interface that extends the predefined interface **Remote** which belongs to the package.
 - Declare all the business methods that can be invoked by the client in this interface.
 
 Since there is a chance of network issues during remote calls, an exception named **RemoteException** may occur; throw it.
@@ -358,7 +359,7 @@ public interface Hello extends Remote {
 
 ---
 
-**Developing the Implementation Class (Remote Object)**
+2. **Developing the Implementation Class (Remote Object)**
 
 We need to implement the remote interface created in the earlier step. (We can write an implementation class separately or we can directly make the server program implement this interface.)
 
@@ -382,7 +383,7 @@ public class ImplExample implements Hello {
 
 ---
 
-**Developing the Server Program**
+3. **Developing the Server Program**
 
 An RMI server program should implement the remote interface or extend the implementation class.
 
@@ -434,7 +435,7 @@ public class Server extends ImplExample {
 
 ---
 
-**Developing the Client Program**
+4. **Developing the Client Program**
 
 Write a client program in it, fetch the remote object and invoke the required method using this object.
 
@@ -460,12 +461,12 @@ public class Client {
     public static void main(String[] args) {
         try {
             // Getting the registry
-            Registry registry = LocateRegistry.getRegistry(null);
+            Registry registry = LocateRegistry.getRegistry("rmi://localhost/Hello"");
             // Looking up the registry for the remote object
             Hello stub = (Hello) registry.lookup("Hello");
             // Calling the remote method using the obtained object
             stub.printMsg();
-            // System.out.println("Remote method invoked");
+            System.out.println("Remote method invoked");
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();
@@ -476,42 +477,42 @@ public class Client {
 
 ---
 
-**Compiling the Application**
+5. **Compiling the Application**
 
-To compile the application:
+    To compile the application:
 
-- Compile the Remote interface.
-- Compile the implementation class.
-- Compile the server program.
-- Compile the client program.
+    - Compile the Remote interface.
+    - Compile the implementation class.
+    - Compile the server program.
+    - Compile the client program.
 
-  ```sh
-  javac *.java
-  ```
+      ```sh
+      javac *.java
+      ```
 
 ---
 
-**Executing the Application**
+6. **Executing the Application**
 
-1. Start the rmi registry using the following command.
+   1. Start the rmi registry using the following command.
 
-   ```sh
-   rmiregistry
-   ```
+      ```sh
+      rmiregistry
+      ```
 
-   This will start an rmi registry on a separate window.
+      This will start an rmi registry on a separate window.
 
-2. Run the server class file as shown below.
+   2. Run the server class file as shown below.
 
-   ```sh
-   java Server
-   ```
+      ```sh
+      java Server
+      ```
 
-3. Run the client class ﬁle as shown below.
+   3. Run the client class ﬁle as shown below.
 
-   ```sh
-   java Client
-   ```
+      ```sh
+      java Client
+      ```
 
 ---
 
@@ -627,7 +628,7 @@ The java application must first obtain information regarding its privileges.
 
 It can obtain the security policy through a policy file.
 
-Example, we allow Java code to have all permissions, the contains of the policy file policy.all is:
+Example, we allow Java code to have all permissions, the contains of the policy file `policy.all` is:
 
 ```java
 grant {
@@ -664,3 +665,233 @@ Alternatively this property can be set inside the program using
 ```java
 System.setProperty().
 ```
+
+### 4.9.3. RMI-IIOP
+
+**IIOP** is **CORBA's** communication protocol using **TCP/IP** as the transport. It specifies a standard for
+client and server communication. **CORBA** is a standard distributed object architecture developed
+by the Object Management Group **(OMG)**. Interfaces to remote objects are described in a
+platform-neutral Interface Definition Language **(IDL)**. Mappings from **IDL** to specific programming
+languages are implemented, binding the language to **CORBA/IIOP**.
+
+The Java(TM) 2 Platform, Standard Edition (J2SE) CORBA/IIOP implementation is known as Java IDL. Java IDL can be used to **define**, **implement**, and access **CORBA** objects from the Java programming language.
+
+Previously Java programmers had to choose between **RMI** and **CORBA/IIOP** (Java IDL) for
+distributed programming solutions. Now, by adhering to a few restrictions, RMI server objects
+can use the **IIOP** protocol and communicate with **CORBA** client objects written in any language.
+
+This solution is known as **RMI-IIOP**. **RMI-IIOP** combines **RMI-style** ease of use with **CORBA** cross-language interloperability.
+
+### 4.9.4. OMG CORBA
+
+1. Introduction
+
+**CORBA** is an acronym for **C**ommon **ORB** **A**rchitecture. The phrase common architecture means a technical standard, so **CORBA** is simply a technical standard for something called an **ORB**.
+
+**ORB** is an acronym for **O**bject **R**equest **B**roker, which is an object-oriented version of an older technology called Remote Procedure Call **(RPC)**.
+
+An **ORB** or **RPC** is a mechanism for invoking operations on an object (or calling a procedure) in a different **"remote"** process that may be running on the same, or a different, computer.
+At a programming level, these **"remote"** calls look similar to **"local"** calls.
+
+Many people refer to **CORBA** as middleware or integration software. This is because **CORBA** is
+often used to get existing, stand-alone applications communicating with each other. A tag-line
+used by **IONA Technologies**, "Making Software Work Together", sums up the purpose of **CORBA**.
+
+Of course, **CORBA** is not the only middleware technology in existence. Some other brand names
+of middleware include **J**ava **R**emote **M**ethod **I**nvocation (**RMI**), **IBM MQ Series**, **Microsoft’s COM**
+and **.NET**, **SOAP**, and **TIBCO Rendezvous**.
+
+---
+
+Scripting languages such as **UNIX shells**, **Perl**, and **Python** also be classified as middleware because scripts are often used to connect programs
+together. A famous example of this is the pipe operator in **UNIX shells**, as illustrated in the example below: 
+
+```sh
+ls -l | grep ˆd
+```
+
+The pipe operator sends the output of the first command to the second command. Put simply, it
+helps two applications communicate with each other, which is what middleware is all about.
+
+One of **CORBA's** strong points is that it is distributed middleware. In particular, it allows
+applications to talk to each other even if the applications are:
+
+- On different computers, for example, across a network.
+- On different operating systems. **CORBA** products are available for many operating systems,
+  including **Windows**, **UNIX**, **IBM mainframes** and **embedded systems**.
+- On different CPU types, for example, **Intel**, **SPARC**, **PowerPC**, **bigendian** or **little-endian**, and
+  different word sizes, for example, **32-bit** and **64-bit** CPUs.
+- Implemented with different programming languages, such as, **C**, **C++**, **Java**, **Smalltalk**, **Ada**,
+  **COBOL**, **PL/I**, **LISP**, and **Python**.
+
+---
+
+**CORBA** is also an object-oriented, distributed middleware. This means that a client does not make calls to a server process.
+Instead, a **CORBA** client makes calls to objects (which happen to live in a server process).
+
+A **CORBA-based system** is a set of objects separating servers from clients with a well-defined programmer interface.
+They provide various services like finding a server by name and facilitating
+communication between a server and a client, including passing of arguments to the methods and getting results of their remote invocations.
+
+A particular implementation of the **CORBA** environment, as well as objects providing services,
+and clients may be done in one of the several programming languages. To ensure their
+interoperability they must conform to the specification defined in the specific, universal language
+
+- the IDL. The specification is used for generating various source files in the target programming
+  language, used to implement CORBA objects.
+  There are several implementations of the CORBA environment available on the market. They are
+  more or less compatible because of differences in versions of the CORBA specification. The Java
+  SDK has supplied such an implementa on since the version 1.3.
+
+**CORBA** is a platform and language independent framework for building distributed systems.
+
+---
+
+2. **Fundamental Concepts of CORBA**
+
+- **CORBA** is an industry standard developed by the **OMG** to aid in distributed
+  object programming.
+- **CORBA** allows programs written in various languages with varying
+  implementations running in separate locations to communicate with each other as
+  easily as if they were in the same process address space.
+- **CORBA** is simply a specification.
+- **CORBA** describes the architecture made of cooperative services.
+- **CORBA** objects can run on any platform, located anywhere on the network, and
+  can be written in any language that has **IDL** mappings.
+- **CORBA** defines the architecture of **ORB-based** environments.
+- **CORBA** provides static and dynamic mechanism for clients to issue requests to
+  objects.
+- **CORBA** is an example of the **DOM**.
+- Transparency is a crucial goal of **CORBA**.
+
+---
+
+3. **Simple Example of CORBA**
+
+![A Simple Example of CORBA](./imgs/corba-example.png){width=300px}
+
+---
+
+First, the server object’s interface has to be defined in **IDL** and the client has to
+write the code that invokes the server object through this **IDL**. At run-time, the
+following steps take place (the step numbers are indicated in the Figure):
+
+1. The server object is started (this is one of the many options as we will see later).
+It advertises its availability to the ORB that records in its directory the location of
+the object. The server object then indicates that it is ready to receive calls and
+waits.
+2. The client object issues a “bind” command for the server object (i.e., find server
+object). The ORB receives this call, locates the server object and returns an object
+reference to the client.
+3. The client uses this object reference to issue the actual call to the server object.
+4. The ORB passes this request to the server object that receives the request and
+processes it.
+5. The server object returns the results to the client through the ORB.
+The ORB invokes the various services to accomplish this interaction
+
+---
+
+4. **Advantages of CORBA**
+
+- Solve problems of interoperability in distributed systems by using object
+technology.
+- Use de facto standards in object technology and commercial availability of
+technology.
+- Create a suite of standard languages, interfaces and protocols for
+interoperability of applications in heterogeneous distributed environments.
+- Build upon, not replace, existing interfaces.
+
+---
+
+5. **CORBA Architecture**
+
+![CORBA Architecture Components](./imgs/corba-arch.png){width=300px}
+
+---
+
+- **Interface Repository:** A dynamic representation of available object interfaces is
+provided in an Interface Repository. This repository represents the interfaces (or
+classes) of all objects in the distributed environment. The clients access the
+Interface Repository to learn about the server objects and determine what type of
+operations can be invoked on an object.
+- **Dynamic Invocation Interface (DII):** This interface allows dynamic construction
+of object invocation. The interface details are filled in by consulting with the
+Interface Repository and or other run-time sources. By using the dynamic
+invocation, Client Application 1 can interact with Server Objects (provided
+descriptions of these Server Objects could be found in the Interface Repository).
+This component is rarely used.
+- **Client IDL Stubs:** The Client stubs make calls to the ORB Core. These
+precompiled stubs make it easier for the Clients to issue static requests to objects
+across a network.
+- **ORB Interface:** This interface goes directly to the ORB for operations that are
+common across all objects. This interface consists of a few APIs to local services
+that may be of interest to some applications. This interface is commonly used by a
+server object to tell the ORB that it is running and ready to accept calls. The client
+can also directly interact with the ORB for operations through this interface.
+
+---
+
+- **Object Adapters:** An object adapter is essentially a scheduler that mediates
+between the ORB and the object implementations (servants). It is responsible for
+
+    a. Generating object references for the called servants,
+    b. Activation and de-activation of servants, and
+    c. Sending requests to servants.
+
+    **CORBA** specifies that each ORB must support a standard adapter called the Basic
+    Object Adapter (BOA). However, BOA was not well specified. To address these
+    issues.
+
+- **Server IDL Stub:** These stubs, also known as server skeletons, provide the code
+that invokes specific server methods. These stubs are generated as part of the IDL
+compilation and are very similar to the client IDL stubs. They provide the interface
+between object adapters and the server application code. Server Objects use this
+stub.
+- **Dynamic Skeleton Interface (DSI):** The DSI, provides a run-time binding for
+servers that do not have IDL generated stubs. These dynamic skeletons can be very
+useful for scripting languages to dynamically generate server objects. When
+invoked, the DSI determines the server object to be invoked and the method to be
+invoked (the selection is based on parameters values supplied by an incoming
+message). In contrast, the server skeletons generated through compiled IDL are
+defined for a certain object class and expect a method implementation for each
+method specified in the IDL. The DSI can receive calls from static or dynamic
+client invocations.
+
+---
+
+- **Object Request Broker (ORB):** ORB is obviously at the heart of CORBA. ORB
+acts as a switch in a CORBA environment — it sets up links between remote
+objects and routes the messages between objects. Any client object can make a
+request from a server object through the ORB and any server object can send
+responses back to the client objects through ORB.
+- **Implementation Repository:** Implementation details of each interface, including
+the operating system specific information used for invocation, the attributes used
+for method selection, and the methods that make up the implementation are loaded
+into the Implementation Repository. The Implementation Repository can be
+implemented differently by different vendors. Some implementations of CORBA
+support IML (implementation mapping language) to describe the implementation
+details.
+
+--- 
+
+6. **Interface Definition Language (IDL)**
+
+An **IDL** file defines the public application programming interface (**API**) that is
+exposed by objects in a server application. The type of a **CORBA** object is called
+an interface, which is similar in concept to a **C++** class or a **Java** interface. **IDL**
+interfaces support multiple inheritance.
+
+An **IDL** interface may contain operations and attributes. An attribute is simply syntactic sugar for a pair of get-
+and set-style operations. An attribute can be readonly, in which case it maps to just a get-style operation.
+
+The parameters of an operation have a specified direction, which can be in
+(meaning that the parameter is passed from the client to the server), out (the
+parameter is passed from the server back to the client) or inout (the parameter is
+passed in both directions). Operations can also have a return value.
+An operation can raise (throw) an exception if something goes wrong. There are
+over 30 predefined exception types, called system exceptions, that all operations
+can throw, although in practice system exceptions are raised by the **CORBA**
+runtime system much more frequently than by application code. In addition to the
+pre-defined system exceptions, new exception types can be defined in an **IDL** file.
+
+These are called user-defined exceptions.
