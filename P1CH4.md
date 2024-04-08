@@ -5,7 +5,6 @@ section-titles: false
 # Table of Contents
 
 <!--toc:start-->
-
 - [Table of Contents](#table-of-contents)
 - [4. Remote Procedure Call (RPC)](#4-remote-procedure-call-rpc)
   - [4.1 Introduction](#41-introduction)
@@ -18,8 +17,12 @@ section-titles: false
   - [4.7. RPC Message Format](#47-rpc-message-format)
     - [Example:](#example)
   - [4.8. RPC Language](#48-rpc-language)
-  - [4.9 Practical application](#49-practical-application) - [4.9.1. Sun Java RMI](#491-sun-java-rmi) - [4.9.2. RMI Security](#492-rmi-security)
-  <!--toc:end-->
+  - [4.9 Practical application](#49-practical-application)
+    - [4.9.1. Sun Java RMI](#491-sun-java-rmi)
+    - [4.9.2. RMI Security](#492-rmi-security)
+    - [4.9.3. RMI-IIOP](#493-rmi-iiop)
+    - [4.9.4. OMG CORBA](#494-omg-corba)
+<!--toc:end-->
 
 # 4. Remote Procedure Call (RPC)
 
@@ -516,7 +519,7 @@ public class Client {
 
 ---
 
-### RMI Example: Calculator Program
+**RMI Example: Calculator Program**
 
 **Interface**
 
@@ -805,7 +808,7 @@ interoperability of applications in heterogeneous distributed environments.
 
 5. **CORBA Architecture**
 
-![CORBA Architecture Components](./imgs/corba-arch.png){width=300px}
+![CORBA Architecture Components](./imgs/corba-arch.png){width=350px}
 
 ---
 
