@@ -192,7 +192,7 @@ The RPC protocol uses a specific format for messages exchanged between clients a
 
 - **Server replies with a REPLY message:**
 
-  ```go
+  ```http
   Message ID: 1234 (matching the original CALL message ID)
   Message Type: REPLY
   RPC Version Number: 2

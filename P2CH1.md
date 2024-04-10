@@ -5,11 +5,26 @@ section-titles: false
 # Table of Contents
 
 <!--toc:start-->
-
 - [Table of Contents](#table-of-contents)
 - [1. Safety principles](#1-safety-principles)
-  - [1.1. Security objectives and associated functions](#11-security-objectives-and-associated-functions) - [1.1.1. Availability](#111-availability) - [1.1.2. Integrity](#112-integrity) - [1.1.3. Confidentiality](#113-confidentiality) - [1.1.4. Identification and authentication.](#114-identification-and-authentication) - [1.1.5. Non-repudiation.](#115-non-repudiation)
-  <!--toc:end-->
+  - [1.1. Security objectives and associated functions](#11-security-objectives-and-associated-functions)
+    - [1.1.1. Availability](#111-availability)
+    - [1.1.2. Integrity](#112-integrity)
+    - [1.1.3. Confidentiality](#113-confidentiality)
+    - [1.1.4. Identification and Authentication](#114-identification-and-authentication)
+    - [1.1.5. Non-repudiation](#115-non-repudiation)
+  - [1.2. Areas of application of computer security](#12-areas-of-application-of-computer-security)
+    - [1.2.1. Physical and environmental security](#121-physical-and-environmental-security)
+    - [1.2.2. Operational safety](#122-operational-safety)
+    - [1.2.3. Logical, application, and information security](#123-logical-application-and-information-security)
+    - [1.2.4. Security of telecommunications infrastructures](#124-security-of-telecommunications-infrastructures)
+    - [1.2.5. Special case of cybersecurity](#125-special-case-of-cybersecurity)
+  - [1.3. Different facets of security](#13-different-facets-of-security)
+    - [1.3.1. Security leadership](#131-security-leadership)
+    - [1.3.2. Importance of legality in the security of information systems](#132-importance-of-legality-in-the-security-of-information-systems)
+    - [1.3.3. Ethics and training](#133-ethics-and-training)
+    - [1.3.4. Security architecture](#134-security-architecture)
+<!--toc:end-->
 
 # 1. Safety principles
 
@@ -77,18 +92,6 @@ By implementing strong **identification** and **authentication** measures, we si
 Our systems typically achieve **non-repudiation** through comprehensive logging practices. These logs record user activity, including actions taken, timestamps, and user identifiers. With proper logging, a user cannot claim they did not perform an action if a clear record exists within the system.
 
 **Non-repudiation** is particularly important for financial transactions, legal documents, and other sensitive actions where a clear audit trail is necessary.
-
-1.2. Areas application of computer security.
-1.2.1. Physical and environmental security.
-1.2.2. Operational safety.
-1.2.3. Logical, application and information security.
-1.2.4. Security of telecommunications infrastructures.
-1.2.5. Special case of cybersecurity.
-1.3. Different facets of security
-1.3.1. Lead security
-1.3.2. Importance of legality in the security of information systems.
-1.3.3. Ethics and training
-1.3.4. Security architecture.
 
 ## 1.2. Areas of application of computer security
 
