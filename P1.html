@@ -1,0 +1,1655 @@
+<div id="introduction" class="slide section level1">
+<h1>1. Introduction</h1>
+<div class="figure">
+<img src="./imgs/Client-server-model.svg" width="400" alt="" />
+<p class="caption">A computer network diagram of clients communicating with a server via the Internet</p>
+</div>
+<h2 id="client-server-model">1.1. Client Server Model</h2>
+<p>The client–server model is a <strong>distributed</strong> application structure that partitions tasks or workloads between the providers of a resource or service, called <strong>servers</strong>, and service <strong>requesters</strong>, called clients.</p>
+<p>Often clients and servers communicate over a computer network on separate hardware, but both client and server may reside in the same system. A <strong>server host</strong> runs one or more server programs, which share their resources with clients.</p>
+<p>A client usually does not share any of its resources, but it requests content or service from a server. Clients, therefore, initiate communication sessions with servers, which await incoming requests. Examples of computer applications that use the client–server model are <strong>email</strong>, network printing, and the <strong>World Wide Web</strong>.</p>
+<h2 id="advantage-of-client-server-architecture">1.2 Advantage of Client-Server architecture</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Client-Server architecture has several<br />
+advantages, such as:</p>
+</div><div class="column" style="width:35%;">
+<p><img src="./imgs/iconfinder-fastwebsiteloadspeed-4417092_116619.png" width="150" /></p>
+</div>
+</div>
+<h3 id="centralized-resources">1.2.1 Centralized resources</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>When all of the data is stored in a single place, it is much easier for administrators to manage and maintain a <strong>single</strong> server, rather than having to manage multiple servers or devices.</p>
+</div><div class="column" style="width:35%;">
+<p><img src="./imgs/iconfinder-server-4417119_116634.png" width="150" /></p>
+</div>
+</div>
+<h3 id="better-security">1.2.2 Better security</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Because of the centralized nature of client/server architecture, it is easier to implement security measures such as access control and data encryption.</p>
+<p>It is also easier to monitor the system for suspicious activity and to quickly respond to security incidents.</p>
+</div><div class="column" style="width:35%;">
+<p><img src="./imgs/iconfinder-secureserver-4417098_116636.png" width="150" /></p>
+</div>
+</div>
+<h3 id="server-level-administration">1.2.3 Server-level administration</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>All of the administration tasks are performed on the server.</p>
+<p>This makes it easier to manage the system as a whole, and it also makes it easier to troubleshoot problems.</p>
+</div><div class="column" style="width:35%;">
+<p><img src="./imgs/iconfinder-firewallserver-4417121_116627.png" width="150" /></p>
+</div>
+</div>
+<h3 id="scalable-network">1.2.4 Scalable network</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Client/server architecture can be expanded to accommodate more users and data. This is because the server can be upgraded to handle more requests, and new clients can be added to the network without impacting the performance of the system as a whole.</p>
+</div><div class="column" style="width:35%;">
+<p><img src="./imgs/iconfinder-serverracks-4417117_116616.png" width="150" /></p>
+</div>
+</div>
+<h2 id="disadvantages-of-the-clientserver-model">1.3. Disadvantages of the client/server model</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Client-Server architecture has several<br />
+disadvantages, such as:</p>
+</div><div class="column" style="width:35%;">
+<p><img src="./imgs/iconfinder-raid-4417120_116628.png" width="150" /></p>
+</div>
+</div>
+<h3 id="high-cost">1.3.1 High cost</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Setting up and maintaining a server can be expensive. The cost of hardware, software, and IT staff can be significant, especially for large organizations.</p>
+</div><div class="column" style="width:35%;">
+<p><img src="./imgs/iconfinder-rackmountserver-4417095_116646.png" width="150" /></p>
+</div>
+</div>
+<h3 id="a-weak-link">1.3.2 A weak link</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>If the server goes down, the entire network is affected. This can be a major problem for businesses that rely on their networks to operate.</p>
+</div><div class="column" style="width:35%;">
+<p><img src="./imgs/iconfinder-serverconnection-4417100_116621.png" width="150" /></p>
+</div>
+</div>
+<h2 id="how-a-clientserver-system-works">1.4 How a client/server system works</h2>
+<div class="figure">
+<img src="./imgs/basic_static_app_server.png" alt="" />
+<p class="caption">Basic web server architecture for a static site</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<h3 id="client-initiates-request">Client initiates request</h3>
+<ol style="list-style-type: decimal">
+<li>The client sends a request to the server over a network.<br />
+The request typically includes information about the resource or service that is needed, such as the URL of a web page or the name of a file.</li>
+</ol>
+<h3 id="server-processes-request">Server processes request</h3>
+<ol start="2" style="list-style-type: decimal">
+<li>The server receives the request and processes it.<br />
+This may involve retrieving data from a database, performing calculations, or running an application.</li>
+</ol>
+<h3 id="server-sends-response">Server sends response</h3>
+<ol start="3" style="list-style-type: decimal">
+<li>The server sends a response back to the client.<br />
+The response typically includes the requested resource or service, such as the HTML code for a web page or the contents of a file.</li>
+</ol>
+<h3 id="client-displays-response">Client displays response</h3>
+<ol start="4" style="list-style-type: decimal">
+<li>The client receives the response and displays it to the user.<br />
+This may involve rendering an HTML page, opening a file, or displaying a message</li>
+</ol>
+<h2 id="the-generations-of-cs">1.5 The generations of C/S</h2>
+<p>The client-server model has evolved over time, and different generations of client-server systems have been developed.</p>
+<h3 id="the-first-generation">1.5.1 The first generation</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="./imgs/terminal.png" width="75" /></p>
+<p>The first generation of client-server architecture was based on mainframes and connected to dumb terminals. The processing was done on the mainframes, and the PCs were able to communicate with each other on a network. These networks were based on file sharing architecture, where the PC downloads files from the corresponding file server and the application is running locally using the data received.</p>
+</div><div class="column" style="width:25%;">
+<p><img src="./imgs/computer-98401_640.png" width="150" /></p>
+</div>
+</div>
+<h3 id="the-second-generation">1.5.2 The second generation</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The second generation of client-server architecture evolved with the improvement in computer technology. The processing demands started to split between personal computers and mainframes. As the networks grew, the limitations of file sharing architectures became the obstacles in the client-server system. This problem was solved by replacing the file server with a database server. Instead of transmitting and saving the file to the client, the database server executes requests for data and returns the result sets to the client. This architecture decreased the network traffic, allowing multiple users to update data at the same time.</p>
+</div><div class="column" style="width:25%;">
+<p><img src="./imgs/Database-mysql.svg.png" width="150" /></p>
+</div>
+</div>
+<h3 id="overview-of-two-tier-architecture">1.5.3 Overview of two-tier architecture</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>This is an fundamental software architecture which consists of two layers or tier one is client and another is server each tier has there own responsibility and they are interlinked with each other or dependent on each other</p>
+</div><div class="column" style="width:45%;">
+<p><img src="./imgs/twotier.png" width="200" /></p>
+</div>
+</div>
+</div>
+<div class="slide section level1">
+
+<ul>
+<li><p><strong>Client tier</strong><br />
+Is the top most layer which is like an user interface and interaction part of the application. it acts as an web browser, desktop application, or mobile app, through which the user interacts with the application. It is responsible for presenting the data and processing the input of the application.</p></li>
+<li><p><strong>Server tier</strong><br />
+is an bottom layer which contains the logic that us required to handle the data processing and data management.</p></li>
+</ul>
+<h3 id="overview-of-three-tier-architecture">1.5.4 Overview of three-tier architecture</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Three-tier architecture is a more advanced system that introduces an additional layer, the application or business logic tier, between the client and the server.</p>
+</div><div class="column" style="width:45%;">
+<p><img src="./imgs/threetier.png" width="200" /></p>
+</div>
+</div>
+<p>In a three-tier system, the application logic or process lives in the middle-tier, separated from the data and the user interface. This architecture is more scalable, robust, and flexible than the two-tier architecture. It can integrate data from multiple sources, making it suitable for larger applications.</p>
+</div>
+<div class="slide section level1">
+
+<ul>
+<li><p><strong>Presentation Tier</strong><br />
+It is the user interface and topmost tier in the architecture. Its purpose is to take request from the client and displays information to the client.</p></li>
+<li><p><strong>Application Tier</strong><br />
+It is the middle tier of the architecture also known as the logic tier or business tier as the information/request gathered through the presentation tier is processed in detail here.</p></li>
+<li><p><strong>Data Tier</strong><br />
+It is the last tier of the architecture also known as the Database Tier. It is used to store the processed information so that it can be retrieved later on when required.</p></li>
+</ul>
+<h3 id="comparison-of-the-two-types-of-architecture">1.5.5 Comparison of the two types of architecture</h3>
+<table>
+<colgroup>
+<col width="1%" />
+<col width="51%" />
+<col width="46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Two-Tier architecture</th>
+<th>Three-Tier Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>Consists of two layers : Client Tier and Database (Data Tier)</td>
+<td>Consists of three layers: Presentation Layer (Client), Application Layer (Server), and Database Layer</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>Easy to build and maintain</td>
+<td>Complex to build and maintain</td>
+</tr>
+<tr class="odd">
+<td>3.</td>
+<td>Typically slower</td>
+<td>Improved performance</td>
+</tr>
+<tr class="even">
+<td>4.</td>
+<td>The application logic is either buried inside the user interface on the client or within the database on the server (or both)</td>
+<td>The application logic or process resides in the middle-tier, it is separated from the data and the user interface</td>
+</tr>
+<tr class="odd">
+<td>5.</td>
+<td>Less secured as client can communicate with database directly</td>
+<td>Secured with middle tier</td>
+</tr>
+<tr class="even">
+<td>6.</td>
+<td>e.g. Traditional desktop apps</td>
+<td>e.g. Web-based applications</td>
+</tr>
+</tbody>
+</table>
+<h3 id="multi-level-architecture">1.5.6 Multi-Level Architecture</h3>
+<p>Multitier architecture (often referred to as n-tier architecture) is a client–server architecture in which presentation, application processing and data management functions are physically separated. The most widespread use of multitier architecture is the three-tier architecture.</p>
+</div>
+<div id="clientserver-architecture" class="slide section level1">
+<h1>2. Client/server architecture</h1>
+<h2 id="clientserver-dialogue-techniques">2.1 Client/server dialogue techniques</h2>
+<p>Client-server dialogue techniques are methods used to manage the flow of communication between a client and a server in a distributed system. These techniques ensure that the client and server can exchange information efficiently and reliably.</p>
+<h3 id="request-response">2.1.1 Request-response</h3>
+<p>This is the <strong>simplest</strong> and <strong>most common</strong> technique. The client sends a request to the server, and the server sends a response back to the client. This technique is used for many different types of requests, such as retrieving data, submitting data, and invoking operations. This pattern is typically implemented in a synchronous fashion, as in web service calls over HTTP, which holds a connection open and waits until the response is delivered or the timeout period expires.</p>
+<p>The most common protocol request/response pattern used on a network is the HTTP (Hypertext Transfer Protocol), which is a stateless protocol that operates over the TCP (Transmission Control Protocol). By default, it uses port 80 for unencrypted connections and port 443 for encrypted connections (using HTTPS).</p>
+</div>
+<div class="slide section level1">
+
+<p><strong>Key components:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Uniform Resource Identifier (URI):</strong></p>
+<p>The client includes a <strong>URI</strong> in the request to specify the desired resource.</p>
+<p>The <strong>URI</strong> (Uniform Resource Identifiers) can be one of two things, a <strong>URL</strong> (Uniform Resource Locator) or a <strong>URN</strong> (Uniform Resource Name).</p>
+<div class="figure">
+<img src="./imgs/uri-url-urn.jpg" width="300" alt="" />
+<p class="caption">URI vs URL vs URN</p>
+</div></li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<ol start="2" style="list-style-type: decimal">
+<li><p><strong>HTTP Methods:</strong></p>
+<p>HTTP defines several methods that specify the desired action to be performed on the server.</p>
+<p>The most commonly used methods are:</p>
+<ul>
+<li><strong>GET:</strong> Retrieves a representation of a resource.</li>
+<li><strong>POST:</strong> Submits data to be processed by the server, often used for form submissions.</li>
+<li><strong>PUT:</strong> Updates or replaces a resource with the provided data.</li>
+<li><strong>DELETE:</strong> Removes a specified resource.</li>
+</ul>
+<div class="figure">
+<img src="./imgs/crud.png" width="300" alt="" />
+<p class="caption">CRUD</p>
+</div></li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<ol start="3" style="list-style-type: decimal">
+<li><p>Headers:</p>
+<p>The client can include additional headers in the request to provide information to the server. Headers can specify things like the client’s user agent, accepted content types, authentication credentials, and more.</p>
+<p><strong>Example:</strong> <code>User-Agent: Mozilla/5.0</code> , <code>Accept: text/html</code></p>
+<p>The server includes headers in the response to provide information back to the client. Headers can specify things like the content type of the response, caching directives, cookies, and more.</p>
+<p><strong>Example:</strong> <code>Content-Type: application/json</code> , <code>Cache-Control: max-age=3600</code></p></li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<ol start="4" style="list-style-type: decimal">
+<li><p><strong>Body:</strong></p>
+<p>For methods like <strong>POST</strong> and <strong>PUT,</strong> the client can include a request body that contains additional data to be sent to the server. The format of the request body depends on the data being transmitted (e.g., form data, JSON payload). The response body contains the actual data returned by the server, format depends on the requested resource.</p></li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<p><strong>Structure of HTTP request:</strong></p>
+<p>A request typically includes some form of input or data payload that is needed by the server to perform the requested action.</p>
+<div class="figure">
+<img src="./imgs/httprequestexample.jpg" width="300" alt="" />
+<p class="caption">HTTP communication diagram</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<pre class="http"><code>POST /api/v1/users HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+{
+    &quot;name&quot;: &quot;Alice&quot;,
+    &quot;email&quot;: &quot;alice@example.com&quot;,
+    &quot;password&quot;: &quot;secret123&quot;
+}</code></pre>
+<p>In this example, the request uses the <strong>HTTP POST</strong> method to create a new user resource on the server. The <strong>URI</strong> or endpoint is <code>/api/v1/users</code>, and the request includes several headers, such as <code>Content-Type</code> and <code>Authorization</code>. Finally, the request body includes a JSON object with data for the new user, including their name, email, and password.</p>
+</div>
+<div class="slide section level1">
+
+<p><strong>The response would look like this:</strong></p>
+<pre class="http"><code>HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+&quot;id&quot;: &quot;1234567890&quot;,
+&quot;name&quot;: &quot;Alice&quot;,
+&quot;email&quot;: &quot;alice@example.com&quot;,
+&quot;createdAt&quot;: &quot;2023-05-25T10:15:30Z&quot;
+}</code></pre>
+<h3 id="basic-notions-client-server-request-response.">2.1.1 Basic notions: Client, Server, Request, Response.</h3>
+<ul>
+<li><p><strong>Server:</strong></p>
+<p>A server is a piece of computer hardware or software (computer program) that provides functionality for other programs or devices, called <strong>“clients”</strong>. Servers can provide various functionalities, often called <strong>“services”</strong>, such as sharing data or resources among multiple clients or performing computations for a client. A single server can serve multiple clients, and a single client can use multiple servers. A client process may run on the same device or may connect over a network to a server on a different device. Typical servers are database servers, file servers, mail servers, print servers, web servers, game servers, and application servers.</p></li>
+<li><p><strong>Client:</strong></p>
+<p>A client is a piece of computer hardware or software (computer program) that consumes functionality from other programs or devices, called <strong>“servers”</strong>. Clients can consume various functionalities, often called <strong>“services”</strong>, such as accessing data or resources, performing computations, or displaying information. A single client can request services from multiple servers, and a single server can serve multiple clients. A client process may run on the same device or may connect over a network to a server on a different device.</p></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<ul>
+<li><p><strong>Request:</strong></p>
+<p>An HTTP request is made by a client, to a named host, which is located on a server. The aim of the request is to access a resource on the server.</p></li>
+<li><p><strong>Response:</strong></p>
+<p>An HTTP response is made by a server to a client. The aim of the response is to provide the client with the resource it requested, or inform the client that the action it requested has been carried out; or else to inform the client that an error occurred in processing its request.</p></li>
+</ul>
+<h2 id="practical-application">2.2 Practical Application</h2>
+<h3 id="inetaddress-class">2.2.1 InetAddress Class</h3>
+<p>Java <strong>InetAddress</strong> class represents an IP address. The <code>java.net.InetAddress</code> class provides methods to get the IP of any host name e.g. <code>www.javatpoint.com</code>.</p>
+<p>An IP address is represented by <strong>32-bit</strong> or <strong>128-bit</strong> unsigned number.</p>
+<ul>
+<li><strong>IPv4:</strong> 32 bits long and represented by four decimal numbers separated by dots e.g. 192.168.1.1</li>
+<li><strong>IPv6:</strong> This is a newer version of the IP address format designed to accommodate the growing number of devices connected to the internet. It is 128 bits long and represented by eight groups of four hexadecimal digits separated by colons e.g. 2001:0db8:85a3:0000:0000:8a2e:0370:7334.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>    <span class="bu">InetAddress</span> address = <span class="bu">InetAddress</span>.<span class="fu">getByName</span>(<span class="st">&quot;www.javatpoint.com&quot;</span>);</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(address); <span class="co">// www.javatpoint.com/172.67.196.82</span></span></code></pre></div>
+<p>An instance of <strong>InetAddress</strong> represents the IP address with its corresponding host name. There are two types of addresses: <strong>Unicast</strong> and <strong>Multicast.</strong></p>
+<ul>
+<li><strong>Unicast:</strong> An identifier for a single interface. A packet sent to a unicast address is delivered to the interface identified by that address.</li>
+<li><strong>Multicast:</strong> An identifier for a set of interfaces (typically belonging to different nodes). A packet sent to a multicast address is delivered to all interfaces identified by that address.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<p>Example of Java InetAddress Class</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.net.Inet4Address;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.util.Arrays;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.net.InetAddress;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> InetDemo2</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>{</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] arg) <span class="kw">throws</span> <span class="bu">Exception</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>{</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>    <span class="bu">InetAddress</span> addr =  <span class="bu">Inet4Address</span>.<span class="fu">getByName</span>(<span class="st">&quot;www.javatpoint.com&quot;</span>);</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>    <span class="bu">InetAddress</span> addr =  <span class="bu">Inet4Address</span>.<span class="fu">getByName</span>(<span class="st">&quot;172.217.19.142&quot;</span>);</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>    <span class="bu">InetAddress</span> addr =  <span class="bu">Inet4Address</span>.<span class="fu">getByAddress</span>(<span class="kw">new</span> <span class="dt">byte</span>[] {<span class="dv">172</span>, <span class="dv">217</span>, <span class="dv">19</span>, <span class="dv">142</span>});</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>    <span class="bu">InetAddress</span> addr =  <span class="bu">Inet4Address</span>.<span class="fu">getByAddress</span>(<span class="st">&quot;www.javatpoint.com&quot;</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>            <span class="kw">new</span> <span class="dt">byte</span>[] {<span class="dv">172</span>, <span class="dv">217</span>, <span class="dv">19</span>, <span class="dv">142</span>});</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="bu">InetAddress</span>.<span class="fu">getAllByName</span>(<span class="st">&quot;www.javatpoint.com&quot;</span>));</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="bu">InetAddress</span>.<span class="fu">getLocalHost</span>());</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="bu">InetAddress</span>.<span class="fu">getLoopbackAddress</span>());</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<div class="sourceCode" id="cb5"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">isReachable</span>(<span class="dv">5000</span>));</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">getHostName</span>());</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">getCanonicalHostName</span>());</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">toString</span>());</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">getAddress</span>());</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">getHostAddress</span>());</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">isAnyLocalAddress</span>());</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">isLinkLocalAddress</span>());</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">isLoopbackAddress</span>());</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">isMulticastAddress</span>());</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">isSiteLocalAddress</span>());</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">hashCode</span>());</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a>    <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(addr.<span class="fu">equals</span>(addr2));</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a>    }</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<table>
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>- <code>getByName(String host)</code></td>
+<td>- Returns an <code>InetAddress</code> object for the given host name.</td>
+</tr>
+<tr class="even">
+<td>- <code>getByAddress(byte[] addr)</code></td>
+<td>- Returns an <code>InetAddress</code> object for the given IP address.</td>
+</tr>
+<tr class="odd">
+<td>- <code>getByAddress(String host, byte[] addr)</code></td>
+<td>- Creates an <code>InetAddress</code> object based on the given host name and IP address.</td>
+</tr>
+<tr class="even">
+<td>- <code>getAllByName(String host)</code></td>
+<td>- Returns all the IP addresses for the given host name.</td>
+</tr>
+<tr class="odd">
+<td>- <code>getLocalHost()</code></td>
+<td>- Returns the <code>InetAddress</code> of the local host.</td>
+</tr>
+<tr class="even">
+<td>- <code>getLoopbackAddress()</code></td>
+<td>- Returns the <code>InetAddress</code> of the loopback network interface.</td>
+</tr>
+<tr class="odd">
+<td>- <code>isReachable(int timeout)</code></td>
+<td>- Tests whether this IP address is reachable.</td>
+</tr>
+<tr class="even">
+<td>- <code>getHostName()</code></td>
+<td>- Returns the host name for this IP address.</td>
+</tr>
+<tr class="odd">
+<td>- <code>getCanonicalHostName()</code></td>
+<td>- Returns the fully qualified domain name for this IP address.</td>
+</tr>
+<tr class="even">
+<td>- <code>toString()</code></td>
+<td>- Returns a string representation of this IP address.</td>
+</tr>
+<tr class="odd">
+<td>- <code>getAddress()</code></td>
+<td>- Returns the IP address of this <code>InetAddress</code> object.</td>
+</tr>
+<tr class="even">
+<td>- <code>getHostAddress()</code></td>
+<td>- Returns the IP address string in textual presentation.</td>
+</tr>
+<tr class="odd">
+<td>- <code>isAnyLocalAddress()</code></td>
+<td>- Tests whether this IP address is a wildcard address.</td>
+</tr>
+<tr class="even">
+<td>- <code>isLinkLocalAddress()</code></td>
+<td>- Tests whether this IP address is a link-local address.</td>
+</tr>
+<tr class="odd">
+<td>- <code>isMulticastAddress()</code></td>
+<td>- Tests whether this IP address is a multicast address.</td>
+</tr>
+<tr class="even">
+<td>- <code>isSiteLocalAddress()</code></td>
+<td>- Tests whether this IP address is a site-local address.</td>
+</tr>
+<tr class="odd">
+<td>- <code>hashCode()</code></td>
+<td>- Returns the hash code value for this IP address.</td>
+</tr>
+<tr class="even">
+<td>- <code>equals(Object obj)</code></td>
+<td>- Compares this object against the specified object.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="using-sockets">2.2.2 Using Sockets</h3>
+<div class="figure">
+<img src="./imgs/socket.jpg" width="300" alt="" />
+<p class="caption">socket</p>
+</div>
+<p>A <strong>network socket</strong> is a software structure within a network node of a computer network that serves as an endpoint for sending and receiving data across the network. The structure and properties of a socket are defined by an <strong>application programming interface</strong> (API) for the networking architecture. Sockets are created only during the lifetime of a process of an application running in the node.</p>
+</div>
+<div class="slide section level1">
+
+<p>Because of the standardization of the <strong>TCP/IP</strong> protocols in the development of the Internet, the term <strong>network socket</strong> is most commonly used in the context of the <strong>Internet protocol</strong> suite, and is therefore often also referred to as <strong>Internet socket</strong>. In this context, a socket is externally identified to other hosts by its socket address, which is the triad of transport protocol, <strong>IP address</strong>, and <strong>port number</strong>.</p>
+<p>The term socket is also used for the software endpoint of node-internal inter-process communication (IPC), which often uses the same API as a network socket.</p>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="./imgs/tcp-udp-sockets.png" width="450" alt="" />
+<p class="caption">TCP UDP Socket</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<p><strong>What makes each connection unique? How does the server know which source port 49888 is who?</strong></p>
+<ul>
+<li>Connection is defined by the <strong>pair</strong> of numbers, known as sockets:
+<ul>
+<li><strong>Source</strong> IP address, <strong>Source</strong> port.</li>
+<li><strong>Destination</strong> IP address, <strong>Destination</strong> port.</li>
+</ul></li>
+<li>Different connections can use the same destination port on server host as long as the source ports or source IPs are different.</li>
+<li>Combining the transport layer port number and the network layer IP address uniquely identifies a particular application process running on an individual host device. This combination is called a <strong>socket</strong>.</li>
+<li>A <strong>socket pair</strong>, consisting of the source and destination IP addresses and port numbers, is also unique and identifies the specific conversation between the two hosts.</li>
+<li>A client socket might look like this, representing the source IP address and source port number: <strong>192.168.1.102:49888</strong></li>
+<li>A socket on a web server might be, representing the destination IP address and destination port number: <strong>198.12.15.14:80</strong></li>
+<li>Together, these two sockets combine to form a socket pair: <strong>192.168.1.102:49888, 198.12.15.14:80</strong></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<pre><code>~ netstat -n
+Proto    Local Address           Foreign Address         State
+tcp      192.168.0.102:37558     157.240.195.174:443     ESTABLISHED
+tcp      192.168.0.102:53410     172.217.21.1:443        ESTABLISHED
+tcp      192.168.0.102:34712     213.204.105.42:80       SYN_SENT
+tcp      192.168.0.102:41182     34.107.243.93:443       ESTABLISHED
+tcp      192.168.0.102:33972     140.82.114.25:443       ESTABLISHED</code></pre>
+<h3 id="tcp-sockets">2.2.2.1 TCP Sockets</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>The <strong>Transmission Control Protocol</strong> (TCP) is one of the main protocols of the <strong>Internet protocol</strong> suite. It originated in the initial network implementation in which it complemented the <strong>Internet Protocol</strong> (IP). Therefore, the entire suite is commonly referred to as <strong>TCP/IP</strong>. TCP provides reliable, ordered, and error-checked delivery of a stream of octets (bytes) between applications running on hosts communicating via an IP network. Major internet applications such as the World Wide Web, email, remote administration, and file transfer rely on TCP, which is part of the Transport Layer of the <strong>TCP/IP</strong> suite. <strong>SSL/TLS</strong> often runs on top of TCP.</p>
+</div><div class="column" style="width:35%;">
+<div class="figure">
+<img src="./imgs/TCP-1.png" width="200" alt="" />
+<p class="caption">Transmission Control Protocol</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide section level1">
+
+<p><strong>TCP</strong> is <strong>connection-oriented</strong>, and a connection between <strong>client</strong> and <strong>server</strong> is established before data can be sent. The server must be listening (passive open) for connection requests from clients before a connection is established. <strong>Three-way handshake</strong> (active open), retransmission, and error detection adds to reliability but lengthens latency.</p>
+<p>Applications that do not require reliable data stream service may use the <strong>User Datagram Protocol</strong> (UDP) instead, which provides a <strong>connectionless datagram</strong> service that prioritizes time over reliability. TCP employs network congestion avoidance. However, there are vulnerabilities in TCP, including denial of service, connection hijacking, TCP veto, and reset attack.</p>
+<p>The <code>java.net.Socket</code> class represents a socket, and the <code>java.net.ServerSocket</code> class provides a mechanism for the server program to listen for clients and establish connections with them.</p>
+</div>
+<div class="slide section level1">
+
+<p><strong>Connection establishment:</strong></p>
+<p>Before a client attempts to connect with a server, the server must first bind to and listen at a port to open it up for connections: this is called a <strong>passive open</strong>. Once the passive open is established, a client may establish a connection by initiating an <strong>active open</strong> using the three-way (or 3-step) handshake:</p>
+<ol style="list-style-type: decimal">
+<li><strong>SYN:</strong> The active open is performed by the client sending a <strong>SYN</strong> to the server. The client sets the segment’s sequence number to a random value <strong>A</strong>.</li>
+<li><strong>SYN-ACK:</strong> In response, the server replies with a <strong>SYN-ACK</strong>. The acknowledgment number is set to one more than the received sequence number i.e. <strong>A+1</strong>, and the sequence number that the server chooses for the packet is another random number, <strong>B</strong>.</li>
+<li><strong>ACK:</strong> Finally, the client sends an <strong>ACK</strong> back to the server. The sequence number is set to the received acknowledgment value i.e. <strong>A+1</strong>, and the acknowledgment number is set to one more than the received sequence number i.e. <strong>B+1</strong>.</li>
+</ol>
+<p>Steps 1 and 2 establish and acknowledge the sequence number for one direction (client to server). Steps 2 and 3 establish and acknowledge the sequence number for the other direction (server to client). Following the completion of these steps, both the client and server have received acknowledgments and a full-duplex communication is established.</p>
+</div>
+<div class="slide section level1">
+
+<p>The following steps occur when establishing a TCP connection between two computers using sockets</p>
+<ol style="list-style-type: decimal">
+<li>The server instantiates a ServerSocket object, denoting which port number communication is to occur on.</li>
+<li>The server invokes the accept() method of the ServerSocket class. This method waits until a client connects to the server on the given port.</li>
+<li>After the server is waiting, a client instantiates a Socket object, specifying the server name and the port number to connect to.</li>
+<li>The constructor of the Socket class attempts to connect the client to the specified server and the port number. If communication is established, the client now has a Socket object capable of communicating with the server.</li>
+<li>On the server side, the accept() method returns a reference to a new socket on the server that is connected to the client’s socket.</li>
+<li>After the connections are established, communication can occur using I/O streams. Each socket has both an OutputStream and an InputStream. The client’s OutputStream is connected to the server’s InputStream, and the client’s InputStream is connected to the server’s OutputStream.</li>
+</ol>
+<p>TCP is a two-way communication protocol, hence data can be sent across both streams at the same time.</p>
+</div>
+<div class="slide section level1">
+
+<ul>
+<li><p><strong>Creating a Server Side Socket:</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="co">// Creates a Server Socket that listens to port 6789.</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a><span class="co">// you don’t specify an IP address for server socket.</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a><span class="bu">ServerSocket</span> welcomeSocket = <span class="kw">new</span> <span class="bu">ServerSocket</span>(<span class="dv">6789</span>);</span></code></pre></div></li>
+<li><p><strong>Listening to socket:</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="bu">Socket</span> connectionSocket = welcomeSocket.<span class="fu">accept</span>();</span></code></pre></div></li>
+<li><p><strong>Creating a Client Socket:</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="co">// connects to the server with IP address 172.217. 22.14 on port 6789.</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a><span class="bu">Socket</span> socket = <span class="kw">new</span> <span class="bu">Socket</span>(<span class="st">&quot;172.217.22.14&quot;</span>, <span class="dv">6789</span>);</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a><span class="co">// You can also use a domain name instead of an IP address, like this:</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a><span class="bu">Socket</span> socket = <span class="kw">new</span> <span class="bu">Socket</span>(<span class="st">&quot;domainname.com&quot;</span>, <span class="dv">6789</span>);</span></code></pre></div></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<ul>
+<li><p><strong>Writing to a Socket (Server or Client):</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="bu">BufferedReader</span> inFrom_X = <span class="kw">new</span> <span class="bu">BufferedReader</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>    <span class="kw">new</span> <span class="bu">InputStreamReader</span>(X_Socket.<span class="fu">getInputStream</span>()));</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a><span class="co">// X represents Server or Client Socket</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>X_Sentence = inFrom_X.<span class="fu">readLine</span>();</span></code></pre></div></li>
+<li><p><strong>Reading from a Socket:</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="bu">DataOutputStream</span> outTo_X = <span class="kw">new</span> <span class="bu">DataOutputStream</span>(X_Socket.<span class="fu">getOutputStream</span>());</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a><span class="co">// X represents Server or Client Socket</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>outTo_X.<span class="fu">writeBytes</span>(X_Sentence);</span></code></pre></div></li>
+<li><p><strong>Closing a Socket:</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a>X_socket.<span class="fu">close</span>();</span></code></pre></div></li>
+</ul>
+<h2 id="tcp-example">TCP Example:</h2>
+<p>The following example implements a Server and client communication using Sockets. the example will create a server socket listening to port 6789 and when a client connect it accepts the connection and replies a capitalized one of the message sent from client</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="co">// TCPServer.java</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.io.*;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.net.*;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> TCPServer {</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span> args[]) <span class="kw">throws</span> <span class="bu">Exception</span> {</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true"></a>        <span class="bu">String</span> clientSentence;</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true"></a>        <span class="bu">String</span> capitalizedSentence;</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true"></a>        <span class="bu">ServerSocket</span> welcomeSocket = <span class="kw">new</span> <span class="bu">ServerSocket</span>(<span class="dv">6789</span>);</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<div class="sourceCode" id="cb14"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a>        <span class="kw">while</span>(<span class="kw">true</span>) {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a>            <span class="bu">Socket</span> connectionSocket = welcomeSocket.<span class="fu">accept</span>();</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a>            <span class="bu">BufferedReader</span> inFromClient =</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a>                <span class="kw">new</span> <span class="bu">BufferedReader</span>(<span class="kw">new</span> <span class="bu">InputStreamReader</span>(connectionSocket.<span class="fu">getInputStream</span>()));</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true"></a>            <span class="bu">DataOutputStream</span> outToClient =</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true"></a>                <span class="kw">new</span> <span class="bu">DataOutputStream</span>(connectionSocket.<span class="fu">getOutputStream</span>());</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true"></a>            clientSentence = inFromClient.<span class="fu">readLine</span>();</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true"></a>            capitalizedSentence = clientSentence.<span class="fu">toUpperCase</span>() + <span class="ch">&#39;\n&#39;</span>;</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true"></a>            outToClient.<span class="fu">writeBytes</span>(capitalizedSentence);</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true"></a>        }</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true"></a>    }</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<div class="sourceCode" id="cb15"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a><span class="co">// TCPClient.java</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.io.*;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.net.*;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> TCPClient {</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span> argv[]) <span class="kw">throws</span> <span class="bu">Exception</span> {</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true"></a>        <span class="bu">String</span> sentence;</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true"></a>        <span class="bu">String</span> modifiedSentence;</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true"></a>        <span class="bu">BufferedReader</span> inFromUser = <span class="kw">new</span> <span class="bu">BufferedReader</span>(<span class="kw">new</span> <span class="bu">InputStreamReader</span>(<span class="bu">System</span>.<span class="fu">in</span>));</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true"></a>        <span class="bu">Socket</span> clientSocket = <span class="kw">new</span> <span class="bu">Socket</span>(<span class="st">&quot;localhost&quot;</span>, <span class="dv">6789</span>);</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true"></a>        <span class="bu">DataOutputStream</span> outToServer = <span class="kw">new</span> <span class="bu">DataOutputStream</span>(clientSocket.<span class="fu">getOutputStream</span>());</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true"></a>        <span class="bu">BufferedReader</span> inFromServer = <span class="kw">new</span> <span class="bu">BufferedReader</span>(</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true"></a>            <span class="kw">new</span> <span class="bu">InputStreamReader</span>(clientSocket.<span class="fu">getInputStream</span>()));</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true"></a>        sentence = inFromUser.<span class="fu">readLine</span>();</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true"></a>        outToServer.<span class="fu">writeBytes</span>(sentence + <span class="ch">&#39;\n&#39;</span>);</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true"></a>        modifiedSentence = inFromServer.<span class="fu">readLine</span>();</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true"></a>        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(modifiedSentence); clientSocket.<span class="fu">close</span>();</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true"></a>    }</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true"></a>}</span></code></pre></div>
+<h3 id="udp-sockets">2.2.2.2 UDP Sockets</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>The <strong>User Datagram Protocol</strong> (UDP) is one of the core communication protocols of the <strong>Internet protocol</strong> suite used to send messages (transported as datagrams in packets) to other hosts on an <strong>Internet Protocol</strong> (IP) network. Within an IP network, <strong>UDP</strong> does not require prior communication to set up communication channels or data paths.</p>
+</div><div class="column" style="width:35%;">
+<div class="figure">
+<img src="./imgs/TCP-2.png" width="200" alt="" />
+<p class="caption">User Datagram Protocol</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide section level1">
+
+<p><strong>UDP</strong> uses a simple <strong>connectionless communication</strong> model with a minimum of protocol mechanisms. UDP provides <strong>checksums</strong> for data integrity, and port numbers for addressing different functions at the source and destination of the datagram. It has no handshaking dialogues and thus exposes the user’s program to any unreliability of the underlying network; there is <strong>no guarantee</strong> of delivery, <strong>ordering</strong>, or <strong>duplicate protection</strong>. If error-correction facilities are needed at the network interface level, an application may instead use <strong>Transmission Control Protocol</strong> (TCP) which is designed for this purpose.</p>
+<p><strong>UDP</strong> is suitable for purposes where error checking and correction are either <strong>not</strong> necessary or are performed in the application; <strong>UDP</strong> avoids the overhead of such processing in the protocol stack. Time-sensitive applications often use <strong>UDP</strong> because dropping packets is preferable to waiting for packets delayed due to retransmission, which may not be an option in a real-time system.</p>
+</div>
+<div class="slide section level1">
+
+<p>The <strong>UDP</strong> protocol provides a mode of network communication whereby applications send packets of data, called <strong>datagrams,</strong> to one another. A <strong>datagram</strong> is an independent, self-contained message sent over the network whose arrival, arrival time, and content are not guaranteed. The <strong>DatagramPacket</strong> and <strong>DatagramSocket</strong> classes in the <code>java.net</code> package implement system-independent <strong>datagram</strong> communication using <strong>UDP</strong>.</p>
+<p>The <code>java.net</code> package contains three classes to help you write Java programs that use <strong>datagrams</strong> to send and receive packets over the network: <strong>DatagramSocket</strong>, <strong>DatagramPacket</strong>, and <strong>MulticastSocket</strong> An application can send and receive <strong>DatagramPackets</strong> through a <strong>DatagramSocket</strong>. In addition, <strong>DatagramPackets</strong> can be broadcast to multiple recipients all listening to a <strong>MulticastSocket</strong>.</p>
+</div>
+<div class="slide section level1">
+
+<p>To send data via Java’s <strong>DatagramSocket</strong> you must first create a <strong>DatagramPacket</strong>. Here is how that is done:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="dt">byte</span>[] buffer = <span class="kw">new</span> <span class="dt">byte</span>[<span class="dv">65508</span>];</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a><span class="bu">InetAddress</span> address = <span class="bu">InetAddress</span>.<span class="fu">getByName</span>(<span class="st">&quot;domainname&quot;</span>);</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a><span class="bu">DatagramPacket</span> packet = <span class="kw">new</span> <span class="bu">DatagramPacket</span>(buffer, buffer.<span class="fu">length</span>, address, p);</span></code></pre></div>
+<p>The byte buffer (the byte array) is the data that is to be sent in the UDP datagram. The length of the above buffer, 65508 bytes, is the maximum amount of data you can send in a single UDP packet.</p>
+<p>The length given to the DatagramPacket constructor is the length of the data in the buffer to send. All data in the buffer after that amount of data is ignored.</p>
+<p>The InetAddress instance contains the address of the node (e.g. server) to send the UDP packet to.</p>
+</div>
+<div class="slide section level1">
+
+<p>The InetAddress class represents an IP address (Internet Address). The getByName() method returns an InetAddress instance with the IP address matching the given host name.</p>
+<p>The port parameter is the UDP port the server to receiver the data is listeing on. UDP and TCP ports are not the same. A computer can have different processes listening on e.g. port 80 in UDP and in TCP at the same time.</p>
+<p>To send the DatagramPacket you must create a DatagramSocket targeted at sending data. Here is how that is done:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a><span class="bu">DatagramSocket</span> datagramSocket = <span class="kw">new</span> <span class="bu">DatagramSocket</span>();</span></code></pre></div>
+<p>To send data you call the send() method, like this:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a>datagramSocket.<span class="fu">send</span>(packet);</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<p>Here is a full example:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true"></a><span class="bu">DatagramSocket</span> datagramSocket = <span class="kw">new</span> <span class="bu">DatagramSocket</span>();</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true"></a><span class="dt">byte</span>[] buffer = <span class="st">&quot;0123456789&quot;</span>.<span class="fu">getBytes</span>();</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true"></a><span class="bu">InetAddress</span> receiverAddress = <span class="bu">InetAddress</span>.<span class="fu">getLocalHost</span>();</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true"></a><span class="bu">DatagramPacket</span> packet = <span class="kw">new</span> <span class="bu">DatagramPacket</span>(buffer, buffer.<span class="fu">length</span>, receiverAddress, <span class="dv">80</span>);</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true"></a>datagramSocket.<span class="fu">send</span>(packet);</span></code></pre></div>
+<p>Receiving data via a DatagramSocket is done by first creating a DatagramPacket and then receiving data into it via the DatagramSocket’s receive() method. Here is an example:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="bu">DatagramSocket</span> datagramSocket = <span class="kw">new</span> <span class="bu">DatagramSocket</span>(<span class="dv">80</span>);</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true"></a><span class="dt">byte</span>[] buffer = <span class="kw">new</span> <span class="dt">byte</span>[<span class="dv">10</span>];</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true"></a><span class="bu">DatagramPacket</span> packet = <span class="kw">new</span> <span class="bu">DatagramPacket</span>(buffer, buffer.<span class="fu">length</span>);</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true"></a>datagramSocket.<span class="fu">receive</span>(packet);</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<p>Notice how the <strong>DatagramSocket</strong> is instantiated with the parameter value 80 passed to its constructor. This parameter is the UDP port the <strong>DatagramSocket</strong> is to receive <strong>UDP</strong> packets on. As mentioned earlier, <strong>TCP</strong> and <strong>UDP</strong> ports are not the same, and thus do not overlap. You can have two different processes listening on both <strong>TCP</strong> and <strong>UDP</strong> port 80, without any conflict.</p>
+<p>Second, a byte buffer and a <strong>DatagramPacket</strong> is created. Notice how the <strong>DatagramPacket</strong> has no information about the node to send data to, as it does when creating a <strong>DatagramPacket</strong> for sending data. This is because we are going to use the <strong>DatagramPacket</strong> for receiving data, not sending it. Thus no destination address is needed.</p>
+<p>Finally the <strong>DatagramSocket’s</strong> <code>receive()</code> method is called. This method blocks until a <strong>DatagramPacket</strong> is received.</p>
+</div>
+<div class="slide section level1">
+
+<h3 id="tcp-vs-udp">TCP VS UDP</h3>
+<table>
+<colgroup>
+<col width="49%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>TCP</th>
+<th>UDP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>- Requires an established connection before transmitting data</td>
+<td>- No connection is needed to start and end a data transfer</td>
+</tr>
+<tr class="even">
+<td>- Can sequence data (send in a specific order)</td>
+<td>- Cannot sequence or arrange data</td>
+</tr>
+<tr class="odd">
+<td>- Can retransmit data if packets fail to arrive</td>
+<td>- No data retransmitting. Lost data can’t be retrieved</td>
+</tr>
+<tr class="even">
+<td>- Delivery is guaranteed</td>
+<td>- Delivery is not guaranteed</td>
+</tr>
+<tr class="odd">
+<td>- Thorough error-checking guarantees data arrives in its intended state</td>
+<td>- Minimal error-checking covers the basics but may not prevent all errors</td>
+</tr>
+<tr class="even">
+<td>- Slow, but complete data delivery</td>
+<td>- Fast, but at risk of incomplete data delivery</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="middleware" class="slide section level1">
+<h1>3. Middleware</h1>
+<h2 id="definition">3.1 Definition</h2>
+<div class="figure">
+<img src="./imgs/middleware.png" width="300" alt="" />
+<p class="caption">Middleware</p>
+</div>
+<p>It is software that helps to <strong>connect</strong> the operating system and applications. Or it is software that runs <strong>between client</strong> and <strong>server</strong> processes. Generally, this software is written in such a way that the user never notices the presence of middleware. It also helps in delivering <strong>secure</strong> and <strong>transparent</strong> services to users.</p>
+<h3 id="types-of-middleware">Types of Middleware</h3>
+<ol style="list-style-type: decimal">
+<li><p><strong>RPC – Remote Procedure Calls</strong> (RPC)</p>
+<ul>
+<li>client makes calls to procedures running on remote computers</li>
+<li>synchronous and asynchronous</li>
+</ul></li>
+<li><p><strong>Message-Oriented Middleware</strong> (MOM)</p>
+<ul>
+<li>asynchronous calls between the client via message queues</li>
+</ul></li>
+<li><p><strong>Publish/Subscribe</strong></p>
+<ul>
+<li>push technology server sends information to client when available</li>
+</ul></li>
+<li><p><strong>Object Request Broker</strong> (ORB)</p>
+<ul>
+<li>Object-oriented management of communications between clients and servers</li>
+</ul></li>
+<li><p><strong>SQL-oriented Data Access</strong></p>
+<ul>
+<li>Middleware between applications and database servers</li>
+</ul></li>
+</ol>
+<h2 id="features">3.2 Features</h2>
+<p>The middleware layer has evolved to the most appropriate place for functionality, such as:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Connection Management:</strong> Opens and closes connections between applications.</li>
+<li><strong>Request Handling:</strong> Receives requests, sends them to the right place, and delivers results back to the sender.</li>
+<li><strong>Process Startup:</strong> Initializes applications on different computers.</li>
+<li><strong>Service Directory:</strong> Keeps track of where all the applications and services are located.</li>
+<li><strong>Remote Data Access:</strong> Allows applications to access data on other computers.</li>
+<li><strong>Security &amp; Trust:</strong> Checks IDs, encrypts data, and ensures things are reliable.</li>
+<li><strong>Monitoring &amp; Alerting:</strong> Watches over computers and devices, reporting any problems.</li>
+<li><strong>Process Shutdown:</strong> Stops applications when they’re done.</li>
+<li><strong>Caching:</strong> Stores frequently used data for faster access.</li>
+<li><strong>Easy-to-Use Interface:</strong> Provides a simple way for applications to talk to each other.</li>
+<li><strong>Hides Complexity:</strong> Makes different hardware and software work together seamlessly.</li>
+<li><strong>Anywhere Applications:</strong> Lets applications run on any computer.</li>
+<li><strong>Different Apps Talking:</strong> Enables applications built with different tools to work together.</li>
+<li><strong>Shared Services:</strong> Provides common tools.</li>
+</ol>
+<h3 id="example">Example</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>The <strong>Android</strong> operating system uses the <strong>Linux</strong> kernel at its core, and also provides an application framework that developers incorporate into their applications. In addition, <strong>Android</strong> provides a middleware layer including libraries that provide services such as <strong>data storage</strong>, <strong>screen display</strong>, <strong>multimedia</strong>, and <strong>web browsing</strong>. Because the middleware libraries are compiled to machine language, services execute quickly. Middleware libraries also implement device-specific functions, so applications and the application framework need not concern themselves with variations between various Android devices. Android’s middleware layer also contains the ART virtual machine and its core Java application libraries.</p>
+</div><div class="column" style="width:30%;">
+<div class="figure">
+<img src="./imgs/embedded-android.png" width="200" alt="" />
+<p class="caption">Android Middleware Services</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="./imgs/sql.jpg" alt="" />
+<p class="caption">SQL</p>
+</div>
+<h2 id="login-procedure">3.4 Login procedure</h2>
+<p>Operation to open a pathway from a client to a server designated by a name with username and a password authentication.</p>
+<p>The connection allows to find the server and if necessary to initiate a communication session with it. The user is authenticated (its name and password are checked). A process taking into account of its requests (which should normally follow) is activated on the server, if it is not already active.</p>
+<p>In a context database server, after, or during the connection, it is necessary to identify the particular DB upon which the user will work.</p>
+<p>Generally, the database name connected using the user name, if so, no specific opening procedure is necessary. After login, user can directly prepare or execute queries.</p>
+<h2 id="preparing-requests">3.4.1 Preparing requests</h2>
+<p>Operation to send a query with parameters not instantiated to a server in order to prepare his execution.</p>
+<h2 id="executing-queries">3.4.2 Executing queries</h2>
+<p>Operation to send a request for previously prepared query to server for execution by providing the values of parameters in most of the client server systems, it is efficient to distinguish preparation and execution of queries. Indeed, the preparation often triggers a query compilation, which generates a parametrized execution plan on the server.</p>
+<p>During the request execution, parameters are instantiated and the plan is executed without recompilation. For a single preparation, it is possible to request multiple executions, which saves time compilation every time.</p>
+<p>However, in the context of ad hoc queries that are executed only once it may be more effective to ask both the preparation and the execution of the query.</p>
+<p>A query typically generates a result. There are immediate responses made by the parameters of possible output of the query, including, in particular, an error code, and the results (or delayed answers), which are usually data generated by the query on the server to the client and need to be retrieved by specific commands.</p>
+<h2 id="retrieving-results">3.4.3 Retrieving results</h2>
+<p>Operation to take back any part of the result of a query on the client. In a database context, the results can be large. For example, a search result in a table, several lines can be found.</p>
+<p>In the case of management of binary large objects (BLOB), the results can be composed of several gigabytes. You must retrieve them by portion, by dividing them into physical blocks exchanged effectively between the client and the server. Where the need to put in place sophisticated technique of caches management.</p>
+<h2 id="jdbc-examples">3.4.3.1 JDBC Examples</h2>
+<p>This is an example of how to create a simple JDBC application. This will show you how to open a database connection, execute a SQL query, and display the results.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.*;</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> Example {</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> DB_URL = <span class="st">&quot;jdbc:mysql://localhost/&quot;</span>;</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> USER = <span class="st">&quot;guest&quot;</span>;</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> PASS = <span class="st">&quot;guest123&quot;</span>;</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> QUERY = <span class="st">&quot;SELECT id, first, last, age FROM Employees&quot;</span>;</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<div class="sourceCode" id="cb22"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a>   <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true"></a>      <span class="co">// Open a connection</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true"></a>      <span class="kw">try</span>(<span class="bu">Connection</span> conn = <span class="bu">DriverManager</span>.<span class="fu">getConnection</span>(DB_URL, USER, PASS);</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true"></a>         <span class="bu">Statement</span> stmt = conn.<span class="fu">createStatement</span>();</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true"></a>         <span class="bu">ResultSet</span> rs = stmt.<span class="fu">executeQuery</span>(QUERY);) {</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true"></a>         <span class="co">// Extract data from result set</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true"></a>         <span class="kw">while</span> (rs.<span class="fu">next</span>()) {</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true"></a>            <span class="co">// Retrieve by column name</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">print</span>(<span class="st">&quot;ID: &quot;</span> + rs.<span class="fu">getInt</span>(<span class="st">&quot;id&quot;</span>));</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">print</span>(<span class="st">&quot;, Age: &quot;</span> + rs.<span class="fu">getInt</span>(<span class="st">&quot;age&quot;</span>));</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">print</span>(<span class="st">&quot;, First: &quot;</span> + rs.<span class="fu">getString</span>(<span class="st">&quot;first&quot;</span>));</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;, Last: &quot;</span> + rs.<span class="fu">getString</span>(<span class="st">&quot;last&quot;</span>));</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true"></a>         }</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true"></a>      } <span class="kw">catch</span> (<span class="bu">SQLException</span> e) {</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true"></a>         e.<span class="fu">printStackTrace</span>();</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true"></a>      }</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true"></a>   }</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true"></a>}</span></code></pre></div>
+<h3 id="create-database-example">Create Database Example</h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.Connection;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.DriverManager;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.SQLException;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.Statement;</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> JDBCExample {</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> DB_URL = <span class="st">&quot;jdbc:mysql://localhost/&quot;</span>;</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> USER = <span class="st">&quot;guest&quot;</span>;</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> PASS = <span class="st">&quot;guest123&quot;</span>;</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<div class="sourceCode" id="cb24"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true"></a></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true"></a>   <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true"></a>      <span class="co">// Open a connection</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true"></a>      <span class="kw">try</span>(<span class="bu">Connection</span> conn = <span class="bu">DriverManager</span>.<span class="fu">getConnection</span>(DB_URL, USER, PASS);</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true"></a>         <span class="bu">Statement</span> stmt = conn.<span class="fu">createStatement</span>();</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true"></a>      ) {</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true"></a>         <span class="bu">String</span> sql = <span class="st">&quot;CREATE DATABASE STUDENTS&quot;</span>;</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true"></a>         stmt.<span class="fu">executeUpdate</span>(sql);</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true"></a>         <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Database created successfully...&quot;</span>);</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true"></a>      } <span class="kw">catch</span> (<span class="bu">SQLException</span> e) {</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true"></a>         e.<span class="fu">printStackTrace</span>();</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true"></a>      }</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true"></a>   }</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true"></a>}</span></code></pre></div>
+<h3 id="insert-records-example">Insert Records Example</h3>
+<div class="sourceCode" id="cb25"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.Connection;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.DriverManager;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.SQLException;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.Statement;</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> JDBCExample {</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> DB_URL = <span class="st">&quot;jdbc:mysql://localhost/&quot;</span>;</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> USER = <span class="st">&quot;guest&quot;</span>;</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> PASS = <span class="st">&quot;guest123&quot;</span>;</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<div class="sourceCode" id="cb26"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true"></a>   <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true"></a>      <span class="co">// Open a connection</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true"></a>      <span class="kw">try</span>(<span class="bu">Connection</span> conn = <span class="bu">DriverManager</span>.<span class="fu">getConnection</span>(DB_URL, USER, PASS);</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true"></a>         <span class="bu">Statement</span> stmt = conn.<span class="fu">createStatement</span>();</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true"></a>      ) {</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true"></a>         <span class="co">// Execute a query</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true"></a>         <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Inserting records into the table...&quot;</span>);</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true"></a>         <span class="bu">String</span> sql = <span class="st">&quot;INSERT INTO Registration VALUES (100, &#39;Zara&#39;, &#39;Ali&#39;, 18)&quot;</span>;</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true"></a>         stmt.<span class="fu">executeUpdate</span>(sql);</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true"></a>         sql = <span class="st">&quot;INSERT INTO Registration VALUES (101, &#39;Mahnaz&#39;, &#39;Fatma&#39;, 25)&quot;</span>;</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true"></a>         stmt.<span class="fu">executeUpdate</span>(sql);</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true"></a>         sql = <span class="st">&quot;INSERT INTO Registration VALUES (102, &#39;Zaid&#39;, &#39;Khan&#39;, 30)&quot;</span>;</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true"></a>         stmt.<span class="fu">executeUpdate</span>(sql);</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true"></a>         sql = <span class="st">&quot;INSERT INTO Registration VALUES(103, &#39;Sumit&#39;, &#39;Mittal&#39;, 28)&quot;</span>;</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true"></a>         stmt.<span class="fu">executeUpdate</span>(sql);</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true"></a>         <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Inserted records into the table...&quot;</span>);</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true"></a>      } <span class="kw">catch</span> (<span class="bu">SQLException</span> e) {</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true"></a>         e.<span class="fu">printStackTrace</span>();</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true"></a>      }</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true"></a>   }</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true"></a>}</span></code></pre></div>
+<h3 id="drop-database-example">Drop Database Example</h3>
+<div class="sourceCode" id="cb27"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.Connection;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.DriverManager;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.SQLException;</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.sql.Statement;</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> JDBCExample {</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> DB_URL = <span class="st">&quot;jdbc:mysql://localhost/&quot;</span>;</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> USER = <span class="st">&quot;guest&quot;</span>;</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true"></a>   <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> PASS = <span class="st">&quot;guest123&quot;</span>;</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<div class="sourceCode" id="cb28"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true"></a></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true"></a>   <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true"></a>      <span class="co">// Open a connection</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true"></a>      <span class="kw">try</span>(<span class="bu">Connection</span> conn = <span class="bu">DriverManager</span>.<span class="fu">getConnection</span>(DB_URL, USER, PASS);</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true"></a>         <span class="bu">Statement</span> stmt = conn.<span class="fu">createStatement</span>();</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true"></a>      ) {</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true"></a>         <span class="bu">String</span> sql = <span class="st">&quot;DROP DATABASE STUDENTS&quot;</span>;</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true"></a>         stmt.<span class="fu">executeUpdate</span>(sql);</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true"></a>         <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Database dropped successfully...&quot;</span>);</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true"></a>      } <span class="kw">catch</span> (<span class="bu">SQLException</span> e) {</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true"></a>         e.<span class="fu">printStackTrace</span>();</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true"></a>      }</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true"></a>   }</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="./imgs/sql2.jpg" width="300" alt="" />
+<p class="caption">SQL Middleware</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<ol style="list-style-type: decimal">
+<li><p>The client issues an SQL call in an API made available by the client middleware. The client API calls can be issued from end user tools or application programs. The client middleware mainly encodes the SQL call into appropriate network messages. As we will see later, the client middleware may support “database procedure” calls in addition to remote SQL calls. The middleware also determines the actual network address of the server and “binds” to it.</p></li>
+<li><p>The network message. containing the SQL statement is prepared and sent to the remote site through network transport services.</p></li>
+<li><p>The message is sent over the communication media and is received by the network transport services of the server machine. If the network architecture of the client machine is different from the network architecture of the server machine, then a network gateway may be needed (e.g., TCP/IP to SNA gateway).</p></li>
+<li><p>The server network system contacts the server middleware that a request has arrived for it.</p></li>
+<li><p>The server middleware gets the network message and schedules the execution of this call by the database server. The middleware may invoke a database procedure consisting of several SQL calls, instead of one SQL call.</p></li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<ol start="6" style="list-style-type: decimal">
+<li><p>The database server processes the SQL call and develops a response (selected table rows and columns) which is sent to the server middleware.</p></li>
+<li><p>The server middleware translates the response into one or more network messages which are sent to the network system. The middleware may cache many messages before an appropriate response to the client can be developed. For example. The server middleware may not send the entire selected table back to client as a single response; instead, it may send large tables as several blocks (e.g., 4 megabytes) of data.</p></li>
+<li><p>The server network system sends the response back to the client network system. Once again, a gateway may be needed if the client and server network architectures are dissimilar.</p></li>
+<li><p>The client network system sends the response messages to the client middleware.</p></li>
+<li><p>The client middleware receives the response message, translates this message into call responses, and sends the response back to the client. The middleware may supply the response to the client one row at a time based on “FETCH” statements issued by the client process.</p></li>
+</ol>
+<h2 id="results-cache-management">3.4.4 Results cache management</h2>
+<p>Techniques to transfer the results by blocks and keep them on the client or / and on the server in order to use them to respond to queries. Beyond the results, middleware can also store queries with execution plans prepared on the server in order to avoid preparing them again during a new request.</p>
+<h2 id="query-cache-management">3.4.5. Query cache management</h2>
+<p>Techniques to keep queries compiled on the server in order to use them to respond to similar requests. Queries and execution plans related can be simply stored in memory: they are then lost at the end of the working session.</p>
+<p>In a more sophisticated way, plans can be stored in the database or in a file and recovered when connecting. This allows important optimization. Whatever the case a working session always ends with a disconnection that allows you to release resources occupied on the server.</p>
+<h2 id="disconnect-procedure">3.4.6. Disconnect procedure</h2>
+<p>Reverse operation of the connection to close the pathway opened from the client to the server.</p>
+</div>
+<div id="remote-procedure-call-rpc" class="slide section level1">
+<h1>4. Remote Procedure Call (RPC)</h1>
+<h2 id="introduction-1">4.1 Introduction</h2>
+<div class="figure">
+<img src="./imgs/operating-system-remote-procedure-call-1.png" width="300" alt="" />
+<p class="caption">RPC Model</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<p>A remote procedure call (RPC) is when a computer program causes a procedure (subroutine) to execute in a different address space (commonly on another computer on a shared network), which is written as if it were a normal (local) procedure call, without the programmer explicitly writing the details for the remote interaction. That is, the programmer writes essentially the same code whether the subroutine is local to the executing program, or remote. This is a form of client–server interaction (caller is client, executor is server), typically implemented via a request–response message-passing system.</p>
+<h2 id="rpc-model">4.2. RPC model</h2>
+<p>RPC is a request–response protocol. An RPC is initiated by the client, which sends a request message to a known remote server to execute a specified procedure with supplied parameters. The remote server sends a response to the client, and the application continues its process. While the server is processing the call, the client is blocked (it waits until the server has finished processing before resuming execution), unless the client sends an asynchronous request to the server, such as an XMLHttpRequest. There are many variations and subtleties in various implementations, resulting in a variety of different (incompatible) RPC protocols.</p>
+<p>An important difference between remote procedure calls and local calls is that remote calls can fail because of unpredictable network problems. Also, callers generally must deal with such failures without knowing whether the remote procedure was actually invoked. Idempotent procedures (those that have no additional effects if called more than once) are easily handled, but enough difficulties remain that code to call remote procedures is often confined to carefully written low-level subsystems.</p>
+<h3 id="sequence-of-events">Sequence of events</h3>
+<ol style="list-style-type: decimal">
+<li>The client calls the client stub. The call is a local procedure call, with parameters pushed on to the stack in the normal way.</li>
+<li>The client stub packs the parameters into a message and makes a system call to send the message. Packing the parameters is called marshalling.</li>
+<li>The client’s local operating system sends the message from the client machine to the server machine.</li>
+<li>The local operating system on the server machine passes the incoming packets to the server stub.</li>
+<li>The server stub unpacks the parameters from the message. Unpacking the parameters is called unmarshalling.</li>
+<li>Finally, the server stub calls the server procedure. The reply traces the same steps in the reverse direction.</li>
+</ol>
+<h3 id="identifying-remote-procedures">4.3. Identifying remote procedures</h3>
+<p>Each RPC procedure is uniquely identified by a program number, version number, and procedure number.</p>
+<p>The program number identifies a group of related remote procedures, each of which has a different procedure number. Program numbers are given out in groups of hexadecimal 20000000.</p>
+<p>0 - 1ﬀﬀﬀf deﬁned by Sun<br />
+20000000 - 3ﬀﬀﬀf deﬁned by user<br />
+40000000 - 5ﬀﬀﬀf transient<br />
+60000000 - 7ﬀﬀﬀf reserved<br />
+80000000 - 9ﬀﬀﬀf reserved<br />
+a0000000 - bfffffff reserved<br />
+c0000000 - dfffffff reserved<br />
+e0000000 - ffffffff reserved</p>
+</div>
+<div class="slide section level1">
+
+<p>Each program also has a version number, so when a minor change is made to a remote service (adding a new procedure, for example), a new program number does not have to be assigned.</p>
+<p>The first implementation of a program will most likely have version number 1. Because most new protocols evolve into better, stable, and mature protocols, a version field of the call message identifies the version of the protocol the caller is using. Version numbers make speaking old and new protocols through the same server process possible.</p>
+<p>Version numbers are incremented when functionality is changed in the remote program. Existing procedures can be changed or new ones can be added. More than one version of a remote program can be defined and a version can have more than one procedure defined. The procedure number identifies the procedure to be called. These numbers are documented in the specific program’s protocol specification.</p>
+<h3 id="dynamic-allocation-of-transport-ports-to-rpc-programs">4.4. Dynamic allocation of transport ports to RPC programs</h3>
+<p><strong>Mapping A Remote Program To A Protocol Port</strong></p>
+<p>In RPC programs, dynamic allocation of transport ports refers to the process where servers don’t have predefined port numbers. Instead, they request available ports from the operating system during startup. This approach offers several advantages compared to static port allocation</p>
+<p><strong>Benefits:</strong></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<ul>
+<li><strong>Flexibility:</strong> RPC servers don’t need to be tied to specific, predefined port numbers. This avoids conflicts if multiple RPC servers run on the same machine.</li>
+<li><strong>Security:</strong> Not using well-known ports can slightly obscure the services running on a machine, providing a minor layer of security through obscurity.</li>
+<li><strong>Firewall Compatibility:</strong> In some network setups, firewalls might be configured to only allow traffic for specific ports. Dynamic allocation helps you get around potential restrictions.</li>
+</ul>
+</div><div class="column" style="width:35%;">
+<div class="figure">
+<img src="./imgs/portmapper.jpg" style="width:80.0%" alt="" />
+<p class="caption">Portmapper</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide section level1">
+
+<p><strong>Why Standard/Static Ports Aren’t Used?</strong></p>
+<p>One of the challenges in <strong>RPC</strong> is that the number of potential <strong>RPC</strong> programs can far exceed the available port numbers. Since both <strong>TCP</strong> and <strong>UDP</strong> use 16-bit port numbers, offering only 65,536 possibilities, while program numbers can represent over 4 billion (2^32) programs. This makes it <strong>impossible</strong> to directly map a program number to a port number. To overcome this limitation, <strong>RPC</strong> utilizes <strong>dynamic port allocation</strong>. Here’s how it works:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Server Startup:</strong> When an RPC server starts, it requests an available port from the operating system. This assigned port is temporary and might change with each server restart.</li>
+<li><strong>Portmapper/RPCBIND Registration:</strong> The server registers its program number, version number, and the dynamically assigned port with a special service called <strong>portmapper</strong> or <strong>RPCBIND</strong>. This service acts like a phonebook, mapping program information to their assigned ports.</li>
+<li><strong>Client Inquiry:</strong> When a client wants to use an RPC service, it:
+<ul>
+<li>Contacts the portmapper/RPCBIND on a well-known port (usually 111).</li>
+<li>Provides the desired program number and version information.</li>
+</ul></li>
+<li><strong>Portmapper Lookup:</strong> The portmapper/RPCBIND searches its registry and retrieves the corresponding dynamically assigned port for the requested program.</li>
+<li><strong>Client Connection:</strong> The client then establishes a direct connection to the server using the retrieved port number and communicates using the chosen protocol (TCP/UDP).</li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<p><strong>Example of Dynamic Port Allocation in RPC</strong></p>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ol style="list-style-type: decimal">
+<li><strong>Server:</strong> An RPC server for a “File Sharing” program starts and dynamically requests a port from the operating system. Let’s say it receives port number <strong>45678</strong>.</li>
+<li><strong>Server Registration:</strong> The server registers its program information (program name: “File Sharing”, version: 1.0) and the assigned port (45678) with the <strong>portmapper/RPCBIND</strong> service (usually on port 111).</li>
+<li><strong>Client:</strong> A client program wants to access the “File Sharing” service.
+<ul>
+<li><em>Client cannot directly connect:</em> The client doesn’t know the server’s dynamically assigned port.</li>
+<li><em>Client Inquiry:</em> The client contacts the portmapper/RPCBIND on port 111 and asks for information about the “File Sharing” program (version 1.0).</li>
+</ul></li>
+</ol>
+</div><div class="column" style="width:30%;">
+<div class="figure">
+<img src="./imgs/rpc-dynamic-port.jpg" width="150" alt="" />
+<p class="caption">Portmapper</p>
+</div>
+</div>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Portmapper Lookup:</strong> The portmapper searches its registry and finds the program information. It retrieves the corresponding dynamically assigned port (45678).</li>
+<li><strong>Client Connection:</strong> The client now knows the server’s port (45678) and can establish a direct connection to the server using that port to access the “File Sharing” service.</li>
+</ol>
+<h2 id="semantics-of-transport-for-rpc">4.5. Semantics of transport for RPC</h2>
+<p>Imagine you’re calling a friend on the phone, but sometimes the call gets dropped and you need to call again. due to traffic or network issues, the message might be delivered multiple times. This can be problematic when working with Remote Procedure Calls (RPCs), where we want to ensure the remote procedure executes as intended.</p>
+<p>There are three choices of call semantics, which define how RPC systems handle situations where the request might be sent multiple times:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Exactly once:</strong> This is the ideal scenario, guaranteeing the procedure runs only once even if the request is sent multiple times. It’s crucial for sensitive operations like financial transactions to avoid duplicate actions. However, achieving this is the most challenging.</li>
+<li><strong>At most once:</strong> A successful response from the remote computer confirms the procedure was executed at most once. However, if there’s an error or the response is lost, the system can’t guarantee execution. This might be suitable for situations where retries are acceptable.</li>
+<li><strong>At least once:</strong> This ensures the procedure runs at least once. The client might resend the request until it receives a successful response. This can lead to multiple executions, which might be undesirable in some cases, but it’s often used for idempotent procedures.</li>
+</ol>
+<h2 id="rpc-authentication">4.6. RPC Authentication</h2>
+<p>To ensure <strong>secure</strong> communication, <strong>RPC</strong> defines various authentication methods. These range from a simple scheme using UNIX credentials to a more robust approach using <strong>Data Encryption Standard</strong> (DES). Here’s an overview of the common authentication types:</p>
+<ul>
+<li><strong>NULL Authentication:</strong> No authentication is performed. Neither the client nor the server verifies each other’s identity. This is suitable for low-risk situations like accessing a public time server.</li>
+<li><strong>UNIX Style Authentication:</strong> This method relies on the client providing its hostname, user ID, local timestamp, and group information. The server uses this information to grant or deny access. However, this method is considered weak as anyone can impersonate a user by knowing their credentials on the client machine. It’s primarily used in NFS (Network File System).</li>
+<li><strong>Data Encryption Standard (DES):</strong> This method offers stronger security. The client sends a password to the server in an encrypted format using a shared secret key. This makes it significantly harder for unauthorized users to eavesdrop and impersonate legitimate users.</li>
+<li><strong>SHORT:</strong> This method is primarily used for subsequent messages after the initial connection is established. After initial authentication, the client receives a “handle” used for future communication, eliminating the need to repeatedly send credentials. This enhances security as an attacker cannot easily forge the handle.</li>
+</ul>
+<h2 id="rpc-message-format">4.7. RPC Message Format</h2>
+<p>The RPC protocol uses a specific format for messages exchanged between clients and servers. It consists of several key elements:</p>
+<ul>
+<li><strong>Message ID:</strong> A unique identifier for each message, allowing proper response matching.</li>
+<li><strong>Message Type:</strong> Indicates whether the message is a <strong>CALL</strong> (requesting a procedure execution) or a <strong>REPLY</strong> (responding to a previous request).</li>
+<li><strong>RPC Version Number:</strong> Specifies the version of the RPC library being used.</li>
+<li><strong>Remote Program:</strong> The name of the program on the server that the procedure call is intended for.</li>
+<li><strong>Remote Program Version:</strong> The specific version of the program being targeted.</li>
+<li><strong>Remote Procedure:</strong> The name of the specific procedure being invoked on the server.</li>
+<li><strong>Procedure Arguments (CALL):</strong> The data sent to the server for the procedure execution (only present in CALL messages).</li>
+<li><strong>Procedure Results (REPLY):</strong> The data returned by the server after executing the procedure (only present in REPLY messages).</li>
+</ul>
+<h3 id="example-1">Example:</h3>
+<ul>
+<li><p><strong>Client sends a CALL message to a server to get the current date:</strong></p>
+<pre><code>Message ID: 1234 (unique identifier)
+Message Type: CALL
+RPC Version Number: 2 (version of the RPC library)
+Remote Program: &quot;DateService&quot;
+Remote Program Version: 1
+Remote Procedure: &quot;GetCurrentDate&quot;
+Procedure Arguments: (empty, as no arguments are needed)</code></pre></li>
+<li><p><strong>Server replies with a REPLY message:</strong></p>
+<pre class="http"><code>Message ID: 1234 (matching the original CALL message ID)
+Message Type: REPLY
+RPC Version Number: 2
+Remote Program: &quot;DateService&quot;
+Remote Program Version: 1
+Remote Procedure: &quot;GetCurrentDate&quot;
+Procedure Results: &quot;2024-03-05&quot; (the current date)</code></pre></li>
+</ul>
+<h2 id="rpc-language">4.8. RPC Language</h2>
+<p>The easiest way to define and generate the protocol is to use a compiler such as <strong>rpcgen</strong>.</p>
+<p>rpcgen generates code (stubs) that hides the network communication details from both the client and server code.</p>
+<p>These stubs can be compiled and linked with the developer’s code to create a functional <strong>RPC</strong> program. The client calls the local stubs as if they were local procedures, and the server procedures are linked with the server stub to handle remote calls.</p>
+<p>The <strong>rpcgen</strong> command generates C code to implement a Remote Procedure Call (RPC) protocol. The <strong>input</strong> to the <strong>rpcgen</strong> command is a language similar to C language known as <strong>RPC Language</strong>. The most common use form for the <strong>rpcgen</strong> command where it takes an input file and generates four output files.</p>
+<p>For example, if the <code>InputFile</code> parameter is named <code>proto.x</code>, then the rpcgen command generates the following:</p>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="86%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>proto.h</td>
+<td>A header file of definitions common to the server and the client</td>
+</tr>
+<tr class="even">
+<td>proto_xdr.c</td>
+<td>A set of XDR routines that translate each data type defined in the header file</td>
+</tr>
+<tr class="odd">
+<td>proto_svc.c</td>
+<td>A stub program for the server</td>
+</tr>
+<tr class="even">
+<td>proto_clnt.c</td>
+<td>A stub program for the client</td>
+</tr>
+</tbody>
+</table>
+<h2 id="practical-application-1">4.9 Practical application</h2>
+<h3 id="sun-java-rmi">4.9.1. Sun Java RMI</h3>
+<p><strong>RMI</strong>, short for Remote Method Invocation, is a <strong>mechanism</strong> that allows objects residing in separate Java Virtual Machines (JVMs) to access and invoke methods on each other. This capability is particularly useful for building distributed applications, as it facilitates remote communication between Java programs. <strong>RMI</strong> functionality is provided within the <code>java.rmi</code> package.</p>
+<p><strong>Architecture of an RMI Application</strong></p>
+<p>In an <strong>RMI</strong> application, we write two programs,</p>
+<ul>
+<li>A <strong>server</strong> program (resides on the server).</li>
+<li>A <strong>client</strong> program (resides on the client).</li>
+</ul>
+<p>Inside the server program, a remote object is created and reference of that object is made available for the client (using the registry).</p>
+<p>The client program requests the remote objects on the server and tries to invoke its methods.</p>
+</div>
+<div class="slide section level1">
+
+<p>The following diagram shows the architecture of an RMI application.</p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><p><strong>Transport Layer</strong>: This layer connects the client and the server. It manages the existing connection and also sets up new connections.</p></li>
+<li><p><strong>Stub</strong>: A stub is a representation (proxy) of the remote object at client. It resides in the client system; it acts as a gateway for the client program.</p></li>
+<li><p><strong>Skeleton</strong>: This is the object which resides on the server side. stub communicates with this skeleton to pass request to the remote object.</p></li>
+<li><p><strong>RRL (Remote Reference Layer)</strong>: It is the layer which manages the references made by the client to the remote object.</p></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="figure">
+<img src="./imgs/rmi-java.png" width="200" alt="" />
+<p class="caption">RMI application</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide section level1">
+
+<p><strong>Working of an RMI Application</strong></p>
+<p>When the client makes a call to the remote object, it is received by the stub which eventually passes this request to the <strong>RRL</strong> (Remote Reference Layer).</p>
+<p>When the client-side <strong>RRL</strong> receives the request, it invokes a method called invoke() of the object remoteRef. It passes the request to the <strong>RRL</strong> on the server side.</p>
+<p>The <strong>RRL</strong> on the server side passes the request to the Skeleton (proxy on the server) which finally invokes the required object on the server.</p>
+<p>The result is passed all the way back to the client.</p>
+</div>
+<div class="slide section level1">
+
+<p><strong>Marshalling and Unmarshalling</strong></p>
+<p>Whenever a client invokes a method that accepts parameters on a remote object, the parameters are <strong>bundled</strong> into a message before being sent over the network.</p>
+<p>These parameters may be of <strong>primitive</strong> type or objects. In case of <strong>primitive</strong> type, the parameters are put together and a header is attached to it. In case the parameters are objects, then they are serialized.</p>
+<p>This process is known as <strong>marshalling.</strong> At the server side, the packed parameters are unbundled and then the required method is invoked. This process is known as <strong>unmarshalling.</strong></p>
+</div>
+<div class="slide section level1">
+
+<p><strong>RMI Registry</strong></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>RMI registry</strong> is a namespace on which all server objects are placed. Each time the server creates an object, it registers this object with the <strong>RMI registry</strong> (using <code>bind()</code> or <code>reBind()</code> methods).</p>
+<p>These are registered using a <strong>unique</strong> name known as bind name.</p>
+<p>To invoke a remote object, the client needs a reference of that object. At that time, the client fetches the object from the registry using its bind name (using <code>lookup()</code> method).</p>
+<p>The following illustration explains the entire process</p>
+</div><div class="column" style="width:30%;">
+<div class="figure">
+<img src="./imgs/rmi-registry.png" alt="" />
+<p class="caption">Registry</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide section level1">
+
+<p><strong>Goals of RMI</strong></p>
+<ul>
+<li>To minimize the complexity of the application.</li>
+<li>To preserve type safety.</li>
+<li>Distributed garbage collection.</li>
+<li>Minimize the difference between working with local and remote objects.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<p><strong>Write RMI Java Application</strong></p>
+<p>To write an RMI Java application:</p>
+<ol style="list-style-type: decimal">
+<li>Define the remote interface</li>
+<li>Develop the implementation class (remote object)</li>
+<li>Develop the server program</li>
+<li>Develop the client program</li>
+<li>Compile the application</li>
+<li>Execute the application</li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<ol style="list-style-type: decimal">
+<li><strong>Defining the Remote Interface</strong></li>
+</ol>
+<p>A remote interface provides the description of all the methods of a particular remote object. The client communicates with this remote interface.</p>
+<p>To create a remote interface:</p>
+<ul>
+<li>Create an interface that extends the predefined interface <strong>Remote</strong> which belongs to the package.</li>
+<li>Declare all the business methods that can be invoked by the client in this interface.</li>
+</ul>
+<p>Since there is a chance of network issues during remote calls, an exception named <strong>RemoteException</strong> may occur; throw it.</p>
+<p>Following is an example of a remote interface. Here we have defined an interface with the name Hello and it has a method called <code>printMsg()</code>.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.Remote;</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.RemoteException;</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true"></a><span class="co">// Creating Remote interface for our application</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">interface</span> Hello <span class="kw">extends</span> <span class="bu">Remote</span> {</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true"></a>    <span class="dt">void</span> <span class="fu">printMsg</span>() <span class="kw">throws</span> <span class="bu">RemoteException</span>;</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Developing the Implementation Class (Remote Object)</strong></li>
+</ol>
+<p>We need to implement the remote interface created in the earlier step. (We can write an implementation class separately or we can directly make the server program implement this interface.)</p>
+<p>To develop an implementation class:</p>
+<ul>
+<li>Implement the interface created in the previous step.</li>
+<li>Provide implementation to all the abstract methods of the remote interface.</li>
+</ul>
+<p>Following is an implementation class. Here, we have created a class named ImplExample and implemented the interface Hello created in the previous step and provided body for this method which prints a message.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true"></a><span class="co">// Implementing the remote interface</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> ImplExample <span class="kw">implements</span> Hello {</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true"></a>    <span class="co">// Implementing the interface method</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">printMsg</span>() {</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true"></a>        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;This is an example RMI program&quot;</span>);</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true"></a>    }</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Developing the Server Program</strong></li>
+</ol>
+<p>An RMI server program should implement the remote interface or extend the implementation class.</p>
+<p>Here, we should create a remote object and bind it to the <strong>RMI registry</strong>.</p>
+<p><strong>To develop a server program:</strong></p>
+<ul>
+<li>Create a server class from where you want invoke the remote object.</li>
+<li>Create a remote object by instantiating the implementation class as shown below.</li>
+<li>Export the remote object using the method <code>exportObject()</code> of the class named UnicastRemoteObject which belongs to the package <code>java.rmi.server</code>.</li>
+<li>Get the RMI registry using the <code>getRegistry()</code> method of the LocateRegistry class which belongs to the package <code>java.rmi.registry</code>.</li>
+<li>Bind the remote object created to the registry using the <code>bind()</code> method of the class named Registry. To this method, pass a string representing the bind name and the object exported, as parameters.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<p><strong>Following is an example of an RMI server program.</strong></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.registry.Registry;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.registry.LocateRegistry;</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.RemoteException;</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.server.UnicastRemoteObject;</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true"></a></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> Server <span class="kw">extends</span> ImplExample {</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true"></a>    <span class="kw">public</span> <span class="fu">Server</span>() {}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<div class="sourceCode" id="cb34"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span> args[]) {</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true"></a>        <span class="kw">try</span> {</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true"></a>            <span class="co">// Instantiating the implementation class</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true"></a>            ImplExample obj = <span class="kw">new</span> <span class="fu">ImplExample</span>();</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true"></a>            <span class="co">// Exporting the object of implementation class</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true"></a>            <span class="co">// (here we are exporting the remote object to the stub)</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true"></a>            Hello stub = (Hello) <span class="bu">UnicastRemoteObject</span>.<span class="fu">exportObject</span>(obj, <span class="dv">0</span>);</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true"></a>            <span class="co">// Binding the remote object (stub) in the registry</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true"></a>            <span class="bu">Registry</span> registry = <span class="bu">LocateRegistry</span>.<span class="fu">getRegistry</span>();</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true"></a>            registry.<span class="fu">bind</span>(<span class="st">&quot;Hello&quot;</span>, stub);</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">err</span>.<span class="fu">println</span>(<span class="st">&quot;Server ready&quot;</span>);</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true"></a>        } <span class="kw">catch</span> (<span class="bu">Exception</span> e) {</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">err</span>.<span class="fu">println</span>(<span class="st">&quot;Server exception: &quot;</span> + e.<span class="fu">toString</span>());</span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true"></a>            e.<span class="fu">printStackTrace</span>();</span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true"></a>        }</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true"></a>    }</span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Developing the Client Program</strong></li>
+</ol>
+<p>Write a client program in it, fetch the remote object and invoke the required method using this object.</p>
+<p>To develop a client program:</p>
+<ul>
+<li>Create a client class from where your intended to invoke the remote object.</li>
+<li>Get the <strong>RMI registry</strong> using the <code>getRegistry()</code> method of the LocateRegistry class which belongs to the package <code>java.rmi.registry</code>.</li>
+<li>Fetch the object from the registry using the method <code>lookup()</code> of the class Registry which belongs to the package <code>java.rmi.registry</code>. To this method, you need to pass a string value representing the bind name as a parameter. This will return you the remote object.</li>
+<li>The <code>lookup()</code> returns an object of type remote, down cast it to the type Hello.</li>
+<li>Finally invoke the required method using the obtained remote object.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<p><strong>Following is an example of an RMI client program.</strong></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.registry.LocateRegistry;</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.registry.Registry;</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> Client {</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true"></a>    <span class="kw">private</span> <span class="fu">Client</span>() {}</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true"></a>        <span class="kw">try</span> {</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true"></a>            <span class="co">// Getting the registry</span></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true"></a>            <span class="bu">Registry</span> registry = <span class="bu">LocateRegistry</span>.<span class="fu">getRegistry</span>(<span class="st">&quot;rmi://localhost/Hello&quot;&quot;);</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true"></a>            <span class="co">// Looking up the registry for the remote object</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true"></a>            Hello stub = (Hello) registry.<span class="fu">lookup</span>(<span class="st">&quot;Hello&quot;</span>);</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true"></a>            <span class="co">// Calling the remote method using the obtained object</span></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true"></a>            stub.<span class="fu">printMsg</span>();</span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Remote method invoked&quot;</span>);</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true"></a>        } <span class="kw">catch</span> (<span class="bu">Exception</span> e) {</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">err</span>.<span class="fu">println</span>(<span class="st">&quot;Client exception: &quot;</span> + e.<span class="fu">toString</span>());</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true"></a>            e.<span class="fu">printStackTrace</span>();</span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true"></a>        }</span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true"></a>    }</span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<ol start="5" style="list-style-type: decimal">
+<li><p><strong>Compiling the Application</strong></p>
+<p>To compile the application:</p>
+<ul>
+<li><p>Compile the Remote interface.</p></li>
+<li><p>Compile the implementation class.</p></li>
+<li><p>Compile the server program.</p></li>
+<li><p>Compile the client program.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true"></a><span class="ex">javac</span> *.java</span></code></pre></div></li>
+</ul></li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<ol start="6" style="list-style-type: decimal">
+<li><p><strong>Executing the Application</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Start the rmi registry using the following command.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true"></a><span class="ex">rmiregistry</span></span></code></pre></div>
+<p>This will start an rmi registry on a separate window.</p></li>
+<li><p>Run the server class file as shown below.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true"></a><span class="ex">java</span> Server</span></code></pre></div></li>
+<li><p>Run the client class ﬁle as shown below.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true"></a><span class="ex">java</span> Client</span></code></pre></div></li>
+</ol></li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<p><strong>RMI Example: Calculator Program</strong></p>
+<p><strong>Interface</strong></p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.registry.Registry;</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.RemoteException;</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">interface</span> Calculator <span class="kw">extends</span> <span class="bu">Remote</span> {</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">long</span> <span class="fu">add</span>(<span class="dt">long</span> a, <span class="dt">long</span> b) <span class="kw">throws</span> <span class="bu">RemoteException</span>;</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">long</span> <span class="fu">sub</span>(<span class="dt">long</span> a, <span class="dt">long</span> b) <span class="kw">throws</span> <span class="bu">RemoteException</span>;</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">long</span> <span class="fu">mul</span>(<span class="dt">long</span> a, <span class="dt">long</span> b) <span class="kw">throws</span> <span class="bu">RemoteException</span>;</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">long</span> <span class="fu">div</span>(<span class="dt">long</span> a, <span class="dt">long</span> b) <span class="kw">throws</span> <span class="bu">RemoteException</span>;</span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<p><strong>Interface Implementation:</strong></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.server.UnicastRemoteObject;</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.RemoteException;</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true"></a></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> CalculatorImpl <span class="kw">extends</span> <span class="bu">UnicastRemoteObject</span> <span class="kw">implements</span> Calculator {</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true"></a>    <span class="co">// Implementations must have an explicit constructor in order to declare the</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true"></a>    <span class="co">// RemoteException exception</span></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true"></a>    <span class="kw">public</span> <span class="fu">CalculatorImpl</span>() <span class="kw">throws</span> <span class="bu">RemoteException</span> {</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true"></a>        <span class="kw">super</span>();</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true"></a>    }</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">long</span> <span class="fu">add</span>(<span class="dt">long</span> a, <span class="dt">long</span> b) <span class="kw">throws</span> <span class="bu">RemoteException</span> {</span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true"></a>        <span class="kw">return</span> a + b;</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true"></a>    }</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">long</span> <span class="fu">sub</span>(<span class="dt">long</span> a, <span class="dt">long</span> b) <span class="kw">throws</span> <span class="bu">RemoteException</span> {</span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true"></a>        <span class="kw">return</span> a - b;</span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true"></a>    }</span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">long</span> <span class="fu">mul</span>(<span class="dt">long</span> a, <span class="dt">long</span> b) <span class="kw">throws</span> <span class="bu">RemoteException</span> {</span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true"></a>        <span class="kw">return</span> a * b;</span>
+<span id="cb41-18"><a href="#cb41-18" aria-hidden="true"></a>    }</span>
+<span id="cb41-19"><a href="#cb41-19" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<p><strong>Server Program:</strong></p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.Naming;</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true"></a></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> CalculatorServer {</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true"></a>    <span class="kw">public</span> <span class="fu">CalculatorServer</span>() {</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true"></a>        <span class="kw">try</span> {</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true"></a>            Calculator c = <span class="kw">new</span> <span class="fu">CalculatorImpl</span>();</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true"></a>            <span class="bu">Naming</span>.<span class="fu">rebind</span>(<span class="st">&quot;rmi://localhost:1099/CalculatorService&quot;</span>, c);</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true"></a>        } <span class="kw">catch</span> (<span class="bu">Exception</span> e) {</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(e);</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true"></a>        }</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true"></a>    }</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true"></a></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span> args[]) {</span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true"></a>        <span class="kw">new</span> <span class="fu">CalculatorServer</span>();</span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true"></a>    }</span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<p><strong>Client Program:</strong></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.Naming;</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.RemoteException;</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.net.MalformedURLException;</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true"></a><span class="kw">import</span><span class="im"> java.rmi.NotBoundException;</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true"></a><span class="kw">import</span> java.lang.ArithmeticException</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true"></a></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> CalculatorClient {</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true"></a>        <span class="kw">try</span> {</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true"></a>            Calculator c = (Calculator)<span class="bu">Naming</span>.<span class="fu">lookup</span>( <span class="st">&quot;rmi://localhost/CalculatorService&quot;</span>);</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(c.<span class="fu">sub</span>(<span class="dv">4</span>, <span class="dv">3</span>));</span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(c.<span class="fu">add</span>(<span class="dv">4</span>, <span class="dv">5</span>));</span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(c.<span class="fu">mul</span>(<span class="dv">3</span>, <span class="dv">6</span>));</span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(c.<span class="fu">div</span>(<span class="dv">9</span>, <span class="dv">3</span>));</span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true"></a>        }</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<div class="sourceCode" id="cb44"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true"></a>        <span class="kw">catch</span> (<span class="bu">MalformedURLException</span> murle) {</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;MalformedURLException&quot;</span> + murle);</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true"></a>        }</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true"></a>        <span class="kw">catch</span> (<span class="bu">RemoteException</span> re) {</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;RemoteException&quot;</span> + re);</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true"></a>        }</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true"></a>        <span class="kw">catch</span> (<span class="bu">NotBoundException</span> nbe) {</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;NotBoundException&quot;</span> + nbe);</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true"></a>        }</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true"></a>        <span class="kw">catch</span> (<span class="bu">ArithmeticException</span> ae) {</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true"></a>            <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;ArithmeticException&quot;</span> + ae);</span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true"></a>        }</span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true"></a>    }</span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true"></a>}</span></code></pre></div>
+<h3 id="rmi-security">4.9.2. RMI Security</h3>
+<p>The java application must first obtain information regarding its privileges.</p>
+<p>It can obtain the security policy through a policy file.</p>
+<p>Example, we allow Java code to have all permissions, the contains of the policy file <code>policy.all</code> is:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true"></a>grant {</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true"></a>    permission java.<span class="fu">security</span>.<span class="fu">AllPermission</span>;</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true"></a>};</span></code></pre></div>
+<p>Now, we given an example for assigning resource permissions:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true"></a>grant {</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true"></a>    permission java.<span class="fu">io</span>.<span class="fu">filePermission</span> <span class="st">&quot;/tmp/*&quot;</span>, <span class="st">&quot;read&quot;</span>,<span class="st">&quot;write&quot;</span>;</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true"></a>    permission java.<span class="fu">net</span>.<span class="fu">SocketPermission</span> <span class="st">&quot;host.domain.com:999&quot;</span>,<span class="st">&quot;connect&quot;</span>;</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true"></a>    permission java.<span class="fu">net</span>.<span class="fu">SocketPermission</span> <span class="st">&quot;*:1024-65535&quot;</span>,<span class="st">&quot;connect,request&quot;</span>;</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true"></a>    permission java.<span class="fu">net</span>.<span class="fu">SocketPermission</span> <span class="st">&quot;*:80&quot;</span>,<span class="st">&quot;connect&quot;</span>;</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true"></a>};</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<ol style="list-style-type: decimal">
+<li>Allow the Java code to read/write any files only under the <code>/tmp</code> directory, includes any subdirectories.</li>
+<li>Allow all java classes to establish a network connection with the host “host.domain.com” on port 999.</li>
+<li>Allows classes to connection to or accept connections on unprivileged ports greater than 1024 , on any host.</li>
+<li>Allows all classes to connect to the HTTP port 80 on any host.</li>
+</ol>
+<p>If the text file containing our security policy is called (for example) policy.all, the original AdditionClient example might now be run as follows:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true"></a><span class="ex">java</span> –Djava.security.policy=policy.all AdditionClient</span></code></pre></div>
+<p>Alternatively this property can be set inside the program using</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true"></a><span class="bu">System</span>.<span class="fu">setProperty</span>().</span></code></pre></div>
+<h3 id="rmi-iiop">4.9.3. RMI-IIOP</h3>
+<p><strong>IIOP</strong> is <strong>CORBA’s</strong> communication protocol using <strong>TCP/IP</strong> as the transport. It specifies a standard for client and server communication. <strong>CORBA</strong> is a standard distributed object architecture developed by the Object Management Group <strong>(OMG)</strong>. Interfaces to remote objects are described in a platform-neutral Interface Definition Language <strong>(IDL)</strong>. Mappings from <strong>IDL</strong> to specific programming languages are implemented, binding the language to <strong>CORBA/IIOP</strong>.</p>
+<p>The Java(TM) 2 Platform, Standard Edition (J2SE) CORBA/IIOP implementation is known as Java IDL. Java IDL can be used to <strong>define</strong>, <strong>implement</strong>, and access <strong>CORBA</strong> objects from the Java programming language.</p>
+<p>Previously Java programmers had to choose between <strong>RMI</strong> and <strong>CORBA/IIOP</strong> (Java IDL) for distributed programming solutions. Now, by adhering to a few restrictions, RMI server objects can use the <strong>IIOP</strong> protocol and communicate with <strong>CORBA</strong> client objects written in any language.</p>
+<p>This solution is known as <strong>RMI-IIOP</strong>. <strong>RMI-IIOP</strong> combines <strong>RMI-style</strong> ease of use with <strong>CORBA</strong> cross-language interloperability.</p>
+<h3 id="omg-corba">4.9.4. OMG CORBA</h3>
+<ol style="list-style-type: decimal">
+<li>Introduction</li>
+</ol>
+<p><strong>CORBA</strong> is an acronym for <strong>C</strong>ommon <strong>ORB</strong> <strong>A</strong>rchitecture. The phrase common architecture means a technical standard, so <strong>CORBA</strong> is simply a technical standard for something called an <strong>ORB</strong>.</p>
+<p><strong>ORB</strong> is an acronym for <strong>O</strong>bject <strong>R</strong>equest <strong>B</strong>roker, which is an object-oriented version of an older technology called Remote Procedure Call <strong>(RPC)</strong>.</p>
+<p>An <strong>ORB</strong> or <strong>RPC</strong> is a mechanism for invoking operations on an object (or calling a procedure) in a different <strong>“remote”</strong> process that may be running on the same, or a different, computer. At a programming level, these <strong>“remote”</strong> calls look similar to <strong>“local”</strong> calls.</p>
+<p>Many people refer to <strong>CORBA</strong> as middleware or integration software. This is because <strong>CORBA</strong> is often used to get existing, stand-alone applications communicating with each other. A tag-line used by <strong>IONA Technologies</strong>, “Making Software Work Together”, sums up the purpose of <strong>CORBA</strong>.</p>
+<p>Of course, <strong>CORBA</strong> is not the only middleware technology in existence. Some other brand names of middleware include <strong>J</strong>ava <strong>R</strong>emote <strong>M</strong>ethod <strong>I</strong>nvocation (<strong>RMI</strong>), <strong>IBM MQ Series</strong>, <strong>Microsoft’s COM</strong> and <strong>.NET</strong>, <strong>SOAP</strong>, and <strong>TIBCO Rendezvous</strong>.</p>
+</div>
+<div class="slide section level1">
+
+<p>Scripting languages such as <strong>UNIX shells</strong>, <strong>Perl</strong>, and <strong>Python</strong> also be classified as middleware because scripts are often used to connect programs together. A famous example of this is the pipe operator in <strong>UNIX shells</strong>, as illustrated in the example below:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true"></a><span class="fu">ls</span> -l <span class="kw">|</span> <span class="fu">grep</span> ˆd</span></code></pre></div>
+<p>The pipe operator sends the output of the first command to the second command. Put simply, it helps two applications communicate with each other, which is what middleware is all about.</p>
+<p>One of <strong>CORBA’s</strong> strong points is that it is distributed middleware. In particular, it allows applications to talk to each other even if the applications are:</p>
+<ul>
+<li>On different computers, for example, across a network.</li>
+<li>On different operating systems. <strong>CORBA</strong> products are available for many operating systems, including <strong>Windows</strong>, <strong>UNIX</strong>, <strong>IBM mainframes</strong> and <strong>embedded systems</strong>.</li>
+<li>On different CPU types, for example, <strong>Intel</strong>, <strong>SPARC</strong>, <strong>PowerPC</strong>, <strong>bigendian</strong> or <strong>little-endian</strong>, and different word sizes, for example, <strong>32-bit</strong> and <strong>64-bit</strong> CPUs.</li>
+<li>Implemented with different programming languages, such as, <strong>C</strong>, <strong>C++</strong>, <strong>Java</strong>, <strong>Smalltalk</strong>, <strong>Ada</strong>, <strong>COBOL</strong>, <strong>PL/I</strong>, <strong>LISP</strong>, and <strong>Python</strong>.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<p><strong>CORBA</strong> is also an object-oriented, distributed middleware. This means that a client does not make calls to a server process. Instead, a <strong>CORBA</strong> client makes calls to objects (which happen to live in a server process).</p>
+<p>A <strong>CORBA-based system</strong> is a set of objects separating servers from clients with a well-defined programmer interface. They provide various services like finding a server by name and facilitating communication between a server and a client, including passing of arguments to the methods and getting results of their remote invocations.</p>
+<p>A particular implementation of the <strong>CORBA</strong> environment, as well as objects providing services, and clients may be done in one of the several programming languages. To ensure their interoperability they must conform to the specification defined in the specific, universal language</p>
+<ul>
+<li>the IDL. The specification is used for generating various source files in the target programming language, used to implement CORBA objects. There are several implementations of the CORBA environment available on the market. They are more or less compatible because of differences in versions of the CORBA specification. The Java SDK has supplied such an implementa on since the version 1.3.</li>
+</ul>
+<p><strong>CORBA</strong> is a platform and language independent framework for building distributed systems.</p>
+</div>
+<div class="slide section level1">
+
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Fundamental Concepts of CORBA</strong></li>
+</ol>
+<ul>
+<li><strong>CORBA</strong> is an industry standard developed by the <strong>OMG</strong> to aid in distributed object programming.</li>
+<li><strong>CORBA</strong> allows programs written in various languages with varying implementations running in separate locations to communicate with each other as easily as if they were in the same process address space.</li>
+<li><strong>CORBA</strong> is simply a specification.</li>
+<li><strong>CORBA</strong> describes the architecture made of cooperative services.</li>
+<li><strong>CORBA</strong> objects can run on any platform, located anywhere on the network, and can be written in any language that has <strong>IDL</strong> mappings.</li>
+<li><strong>CORBA</strong> defines the architecture of <strong>ORB-based</strong> environments.</li>
+<li><strong>CORBA</strong> provides static and dynamic mechanism for clients to issue requests to objects.</li>
+<li><strong>CORBA</strong> is an example of the <strong>DOM</strong>.</li>
+<li>Transparency is a crucial goal of <strong>CORBA</strong>.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Simple Example of CORBA</strong></li>
+</ol>
+<div class="figure">
+<img src="./imgs/corba-example.png" width="300" alt="" />
+<p class="caption">A Simple Example of CORBA</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<p>First, the server object’s interface has to be defined in <strong>IDL</strong> and the client has to write the code that invokes the server object through this <strong>IDL</strong>. At run-time, the following steps take place (the step numbers are indicated in the Figure):</p>
+<ol style="list-style-type: decimal">
+<li>The server object is started (this is one of the many options as we will see later). It advertises its availability to the ORB that records in its directory the location of the object. The server object then indicates that it is ready to receive calls and waits.</li>
+<li>The client object issues a “bind” command for the server object (i.e., find server object). The ORB receives this call, locates the server object and returns an object reference to the client.</li>
+<li>The client uses this object reference to issue the actual call to the server object.</li>
+<li>The ORB passes this request to the server object that receives the request and processes it.</li>
+<li>The server object returns the results to the client through the ORB. The ORB invokes the various services to accomplish this interaction</li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Advantages of CORBA</strong></li>
+</ol>
+<ul>
+<li>Solve problems of interoperability in distributed systems by using object technology.</li>
+<li>Use de facto standards in object technology and commercial availability of technology.</li>
+<li>Create a suite of standard languages, interfaces and protocols for interoperability of applications in heterogeneous distributed environments.</li>
+<li>Build upon, not replace, existing interfaces.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<ol start="5" style="list-style-type: decimal">
+<li><strong>CORBA Architecture</strong></li>
+</ol>
+<div class="figure">
+<img src="./imgs/corba-arch.png" width="350" alt="" />
+<p class="caption">CORBA Architecture Components</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<ul>
+<li><strong>Interface Repository:</strong> A dynamic representation of available object interfaces is provided in an Interface Repository. This repository represents the interfaces (or classes) of all objects in the distributed environment. The clients access the Interface Repository to learn about the server objects and determine what type of operations can be invoked on an object.</li>
+<li><strong>Dynamic Invocation Interface (DII):</strong> This interface allows dynamic construction of object invocation. The interface details are filled in by consulting with the Interface Repository and or other run-time sources. By using the dynamic invocation, Client Application 1 can interact with Server Objects (provided descriptions of these Server Objects could be found in the Interface Repository). This component is rarely used.</li>
+<li><strong>Client IDL Stubs:</strong> The Client stubs make calls to the ORB Core. These precompiled stubs make it easier for the Clients to issue static requests to objects across a network.</li>
+<li><strong>ORB Interface:</strong> This interface goes directly to the ORB for operations that are common across all objects. This interface consists of a few APIs to local services that may be of interest to some applications. This interface is commonly used by a server object to tell the ORB that it is running and ready to accept calls. The client can also directly interact with the ORB for operations through this interface.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<ul>
+<li><p><strong>Object Adapters:</strong> An object adapter is essentially a scheduler that mediates between the ORB and the object implementations (servants). It is responsible for</p>
+<ol style="list-style-type: lower-alpha">
+<li>Generating object references for the called servants,</li>
+<li>Activation and de-activation of servants, and</li>
+<li>Sending requests to servants.</li>
+</ol>
+<p><strong>CORBA</strong> specifies that each ORB must support a standard adapter called the Basic Object Adapter (BOA). However, BOA was not well specified. To address these issues.</p></li>
+<li><p><strong>Server IDL Stub:</strong> These stubs, also known as server skeletons, provide the code that invokes specific server methods. These stubs are generated as part of the IDL compilation and are very similar to the client IDL stubs. They provide the interface between object adapters and the server application code. Server Objects use this stub.</p></li>
+<li><p><strong>Dynamic Skeleton Interface (DSI):</strong> The DSI, provides a run-time binding for servers that do not have IDL generated stubs. These dynamic skeletons can be very useful for scripting languages to dynamically generate server objects. When invoked, the DSI determines the server object to be invoked and the method to be invoked (the selection is based on parameters values supplied by an incoming message). In contrast, the server skeletons generated through compiled IDL are defined for a certain object class and expect a method implementation for each method specified in the IDL. The DSI can receive calls from static or dynamic client invocations.</p></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<ul>
+<li><strong>Object Request Broker (ORB):</strong> ORB is obviously at the heart of CORBA. ORB acts as a switch in a CORBA environment — it sets up links between remote objects and routes the messages between objects. Any client object can make a request from a server object through the ORB and any server object can send responses back to the client objects through ORB.</li>
+<li><strong>Implementation Repository:</strong> Implementation details of each interface, including the operating system specific information used for invocation, the attributes used for method selection, and the methods that make up the implementation are loaded into the Implementation Repository. The Implementation Repository can be implemented differently by different vendors. Some implementations of CORBA support IML (implementation mapping language) to describe the implementation details.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<ol start="6" style="list-style-type: decimal">
+<li><strong>Interface Definition Language (IDL)</strong></li>
+</ol>
+<p>An <strong>IDL</strong> file defines the public application programming interface (<strong>API</strong>) that is exposed by objects in a server application. The type of a <strong>CORBA</strong> object is called an interface, which is similar in concept to a <strong>C++</strong> class or a <strong>Java</strong> interface. <strong>IDL</strong> interfaces support multiple inheritance.</p>
+<p>An <strong>IDL</strong> interface may contain operations and attributes. An attribute is simply syntactic sugar for a pair of get- and set-style operations. An attribute can be readonly, in which case it maps to just a get-style operation.</p>
+<p>The parameters of an operation have a specified direction, which can be in (meaning that the parameter is passed from the client to the server), out (the parameter is passed from the server back to the client) or inout (the parameter is passed in both directions). Operations can also have a return value. An operation can raise (throw) an exception if something goes wrong. There are over 30 predefined exception types, called system exceptions, that all operations can throw, although in practice system exceptions are raised by the <strong>CORBA</strong> runtime system much more frequently than by application code. In addition to the pre-defined system exceptions, new exception types can be defined in an <strong>IDL</strong> file.</p>
+<p>These are called user-defined exceptions.</p>
+</div>
