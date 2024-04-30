@@ -5,6 +5,7 @@ section-titles: false
 # Table of Contents
 
 <!--toc:start-->
+
 - [Table of Contents](#table-of-contents)
 - [Governance and security strategy](#governance-and-security-strategy)
   - [3.1. Governing security](#31-governing-security)
@@ -23,8 +24,7 @@ section-titles: false
     - [3.5.1. Compromise and common sense](#351-compromise-and-common-sense)
     - [3.5.2. Responsibility](#352-responsibility)
   - [3.6. Organize and lead](#36-organize-and-lead)
-<!--toc:end-->
-
+  <!--toc:end-->
 
 # Governance and security strategy
 
@@ -63,12 +63,12 @@ Information risk refers to the potential for harm to an organization's informati
 
 Understanding the risks an organization faces is the cornerstone of effective security management. By identifying and analyzing potential threats and vulnerabilities, organizations can prioritize their security efforts and allocate resources strategically.
 
-- **Risk Identification Techniques:** Several techniques can be used to identify information security risks. These include:
+**Risk Identification Techniques:** Several techniques can be used to identify information security risks. These include:
 
-  - **Threat modeling:** Identifying potential threats and how they might exploit vulnerabilities in systems or processes.
-  - **Vulnerability assessments:** Regularly scanning systems and networks to identify weaknesses that could be exploited by attackers.
-  - **Security audits:** A comprehensive review of an organization's security posture to identify gaps and areas for improvement.
-  - **Industry best practices:** Learning from security incidents experienced by other organizations in the same industry.
+- **Threat modeling:** Identifying potential threats and how they might exploit vulnerabilities in systems or processes.
+- **Vulnerability assessments:** Regularly scanning systems and networks to identify weaknesses that could be exploited by attackers.
+- **Security audits:** A comprehensive review of an organization's security posture to identify gaps and areas for improvement.
+- **Industry best practices:** Learning from security incidents experienced by other organizations in the same industry.
 
 ## 3.4. Strategic vision of security
 
