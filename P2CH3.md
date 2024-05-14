@@ -24,9 +24,12 @@ section-titles: false
     - [3.5.1. Compromise and common sense](#351-compromise-and-common-sense)
     - [3.5.2. Responsibility](#352-responsibility)
   - [3.6. Organize and lead](#36-organize-and-lead)
+    - [3.6.1. Structural organization](#361-structural-organization)
+    - [3.6.2.Actors and skills](#362actors-and-skills)
+  - [3.7. Taking legal needs into account](#37-taking-legal-needs-into-account) - [3.7.1. Security and suppression of computer crime](#371-security-and-suppression-of-computer-crime) - [3.7.2. Offences, responsibilities and obligations of means](#372-offences-responsibilities-and-obligations-of-means)
   <!--toc:end-->
 
-# Governance and security strategy
+# 3. Governance and security strategy
 
 ## 3.1. Governing security
 
@@ -87,7 +90,7 @@ A well-defined security vision sets the overall direction for an organization's 
 
 ### 3.4.3. Success conditions
 
-- Define clear metrics to measure the success of the security strategy. These metrics should be measurable, achievable, relevant, and time-bound (SMART).
+- Define clear metrics to measure the success of the security strategy. These metrics should be measurable, achievable, relevant, and time-bound.
 - Examples of success conditions might include reducing the number of security incidents, improving employee security awareness, or achieving compliance with industry regulations.
 
 ### 3.4.4. Pragmatic approach
@@ -129,3 +132,36 @@ A security policy is a formal document that outlines the organization's security
 
   - Regular security awareness training programs can significantly improve employee behavior and reduce the risk of human error-related security incidents.
   - Training should cover topics like password security, phishing scams, social engineering, and best practices for protecting sensitive information.
+
+### 3.6.1. Structural organization
+
+A well-structured security organization ensures clear ownership, accountability, and efficient execution of security strategies.
+
+- **Centralized Security Team:** A dedicated team with specialists in areas like vulnerability management, incident response, and security awareness training. This team sets security direction and oversees implementation across the organization.
+- **Decentralized Security Integration:** Integrate security considerations into existing departmental structures. Appoint security champions or officers within departments to raise awareness, implement local security policies, and report security concerns to the central team.
+- **Hybrid Approach:** A combination of centralized and decentralized models. The central team provides direction and guidance, while departmental security champions handle day-to-day security tasks within their specific areas.
+
+### 3.6.2.Actors and skills
+
+The effectiveness of your security organization depends on having the right people with the necessary skills.
+
+- **Security Analysts:** Identify and analyze security vulnerabilities, conduct penetration testing, and monitor security systems. Skills: Network security, vulnerability assessment, incident response.
+- **Security Engineers:** Design, implement, and manage security controls like firewalls, intrusion detection systems, and encryption. Skills: Network security, system administration, security architecture.
+- **Security Awareness Trainers:** Develop and deliver security awareness training programs to educate employees on security best practices. Skills: Adult learning principles, communication, information security.
+- **Security Compliance Officers:** Ensure compliance with relevant security regulations and standards. Skills: Regulatory knowledge, auditing, risk management.
+
+## 3.7. Taking legal needs into account
+
+Integrating legal considerations into your security strategy is crucial for staying compliant with relevant laws and regulations.
+
+### 3.7.1. Security and suppression of computer crime
+
+- Implement controls to prevent and detect computer crimes like hacking, data breaches, and malware attacks.
+- Develop incident response procedures that comply with legal requirements for reporting and preserving evidence.
+- Laws like the Computer Fraud and Abuse Act (CFAA) in the US or the General Data Protection Regulation (GDPR) in the EU may have specific reporting and investigation mandates.
+
+### 3.7.2. Offences, responsibilities and obligations of means
+
+- Define acceptable use policies for IT resources to deter misuse and hold employees accountable.
+- Ensure data privacy regulations, such as GDPR, are considered when collecting, storing, and processing personal data.
+- Understanding relevant laws regarding data privacy, acceptable use, and computer crime helps establish a secure and legally compliant environment.
