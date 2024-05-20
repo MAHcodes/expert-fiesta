@@ -5,11 +5,10 @@ section-titles: false
 # Table of Contents
 
 <!--toc:start-->
-
 - [Table of Contents](#table-of-contents)
-- [Governance and security strategy](#governance-and-security-strategy)
+- [3. Governance and security strategy](#3-governance-and-security-strategy)
   - [3.1. Governing security](#31-governing-security)
-    - [3.1.1.Basics of Information Security Governance](#311basics-of-information-security-governance)
+    - [3.1.1. Basics of Information Security Governance](#311-basics-of-information-security-governance)
   - [3.2. Managing information risk](#32-managing-information-risk)
     - [3.2.1. Definitions](#321-definitions)
     - [3.2.2. Management Principles](#322-management-principles)
@@ -25,9 +24,11 @@ section-titles: false
     - [3.5.2. Responsibility](#352-responsibility)
   - [3.6. Organize and lead](#36-organize-and-lead)
     - [3.6.1. Structural organization](#361-structural-organization)
-    - [3.6.2.Actors and skills](#362actors-and-skills)
-  - [3.7. Taking legal needs into account](#37-taking-legal-needs-into-account) - [3.7.1. Security and suppression of computer crime](#371-security-and-suppression-of-computer-crime) - [3.7.2. Offences, responsibilities and obligations of means](#372-offences-responsibilities-and-obligations-of-means)
-  <!--toc:end-->
+    - [3.6.2. Actors and skills](#362-actors-and-skills)
+  - [3.7. Taking legal needs into account](#37-taking-legal-needs-into-account)
+    - [3.7.1. Security and suppression of computer crime](#371-security-and-suppression-of-computer-crime)
+    - [3.7.2. Offences, responsibilities and obligations of means](#372-offences-responsibilities-and-obligations-of-means)
+<!--toc:end-->
 
 # 3. Governance and security strategy
 
@@ -35,7 +36,7 @@ section-titles: false
 
 Effective cybersecurity requires proper governance, which refers to the framework of rules, processes, and decision-rights that ensure information security is managed effectively within an organization.
 
-### 3.1.1.Basics of Information Security Governance
+### 3.1.1. Basics of Information Security Governance
 
 - **Alignment with Business Goals:** Security strategies should align with the organization's overall business objectives. Striking a balance between security and operational efficiency is crucial.
 - **Roles and Responsibilities:** Clearly define roles and responsibilities for security across all levels of the organization. This ensures everyone understands their part in maintaining a secure environment.
@@ -141,7 +142,7 @@ A well-structured security organization ensures clear ownership, accountability,
 - **Decentralized Security Integration:** Integrate security considerations into existing departmental structures. Appoint security champions or officers within departments to raise awareness, implement local security policies, and report security concerns to the central team.
 - **Hybrid Approach:** A combination of centralized and decentralized models. The central team provides direction and guidance, while departmental security champions handle day-to-day security tasks within their specific areas.
 
-### 3.6.2.Actors and skills
+### 3.6.2. Actors and skills
 
 The effectiveness of your security organization depends on having the right people with the necessary skills.
 
