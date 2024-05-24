@@ -14,7 +14,7 @@ section-titles: false
     - [7.2.3. Privacy of user and signaling data](#723-privacy-of-user-and-signaling-data)
     - [7.2.4. Limits of GSM security](#724-limits-of-gsm-security)
   - [7.3. Wireless LANs and Personal Area Networks](#73-wireless-lans-and-personal-area-networks)
-  <!--toc:end-->
+<!--toc:end-->
 
 # 7. Wireless network security
 
