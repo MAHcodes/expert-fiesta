@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 if [ ! -d "pdfs" ]; then
-  mkdir "pdfs"
+	mkdir "pdfs"
 fi
 
 pandoc -s $opts -t beamer $1 -o "./pdfs/$(basename $1 .md).pdf" \
-  --slide-level=3 \
+	--slide-level=3 \
 	-V title="Client Server" \
-  -V subtitle="My presentation subtitle" \
+	-V subtitle="My presentation subtitle" \
 	-V colortheme="wolverine" \
-  -V theme="AnnArbor" \
+	-V theme="AnnArbor" \
 	-V author="Mhmd Ali Hsen" \
 	-V institute="Al Afaq" \
 	-V date="2023 - 2024" \
